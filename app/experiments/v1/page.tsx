@@ -1,11 +1,18 @@
 'use client';
 
+/**
+ * @experiment v1
+ * @base main (app/page.tsx)
+ * @date 2026-03-18
+ * @changes 基线版本，与主版本完全一致
+ */
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SocialProof } from './components/sections/SocialProof';
-import { DestinySamples } from './components/sections/DestinySamples';
+import { SocialProof } from '../../components/sections/SocialProof';
+import { DestinySamples } from '../../components/sections/DestinySamples';
 
 /**
  * 百澤 BAIZE - 极简风格首页
@@ -197,22 +204,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="relative grid grid-cols-12 gap-4 py-16 border-t border-[var(--sand)] group hover:bg-[var(--background-alt)]/50 transition-colors duration-500 -mx-6 px-6"
+              className="grid grid-cols-12 gap-4 py-16 border-t border-[var(--sand)] group hover:bg-[var(--background-alt)]/50 transition-colors duration-500 -mx-6 px-6"
             >
-              {/* 效果1：背景大编号 - group-hover 透明度变化 */}
-              <span className="absolute -top-6 left-6 text-[8rem] md:text-[12rem] font-extralight text-[var(--primary)] leading-none pointer-events-none select-none opacity-[0.02] group-hover:opacity-[0.06] transition-opacity duration-300">
-                {item.num}
-              </span>
-
               <div className="col-span-2 md:col-span-1">
                 <span className="text-xs text-[var(--warm-gray)] tracking-[0.2em] font-light">{item.num}</span>
               </div>
               <div className="col-span-10 md:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-extralight tracking-[0.15em] text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors font-en">
+                <h3 className="text-2xl md:text-3xl font-extralight tracking-[0.15em] text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
                   {item.title}
                 </h3>
-                {/* 效果2：英文标题下划线生长 - group-hover 宽度变化 */}
-                <div className="h-px bg-[var(--accent)] mt-3 w-0 group-hover:w-[80%] transition-all duration-400 ease-out" />
               </div>
               <div className="col-span-12 md:col-span-2 mt-4 md:mt-0">
                 <p className="text-sm tracking-[0.3em] text-[var(--accent)] font-medium">
@@ -220,8 +220,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="col-span-12 md:col-span-6 mt-4 md:mt-0">
-                {/* 效果3：描述文字悬停右移+变色 - group-hover 位移+颜色变化 */}
-                <p className="text-sm font-light leading-relaxed text-[var(--text-secondary)] max-w-md group-hover:translate-x-2.5 group-hover:text-[var(--primary)] transition-all duration-300">
+                <p className="text-sm font-light leading-relaxed text-[var(--text-secondary)] max-w-md">
                   {item.desc}
                 </p>
               </div>

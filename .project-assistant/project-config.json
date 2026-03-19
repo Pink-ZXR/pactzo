@@ -1,0 +1,41 @@
+{
+  "name": "百澤 Pactzo 宠物匹配网站",
+  "version": "0.1.0",
+  "type": "Next.js 16 + React 19 + TypeScript",
+  "directories": {
+    "main": {
+      "app/": "主应用页面路由",
+      "components/ui/": "基础UI组件库",
+      "components/illustrations/": "手绘插画组件",
+      "lib/": "工具函数库",
+      "hooks/": "React Hooks"
+    },
+    "test": {
+      "app/experiments/": "迭代开发目录 - 所有新功能/实验在此进行"
+    },
+    "config": {
+      ".project-assistant/": "项目管理助手配置和日志"
+    }
+  },
+  "rules": {
+    "naming": {
+      "components": "PascalCase (Button.tsx, Card.tsx)",
+      "pages": "kebab-case (birthday/page.tsx)",
+      "utils": "camelCase (useTestStore.tsx)",
+      "constants": "UPPER_SNAKE_CASE"
+    },
+    "imports": {
+      "alias": "@/* 映射到项目根目录",
+      "order": ["react/next", "components", "hooks", "lib", "relative"]
+    },
+    "modification": {
+      "mainVersion": "禁止直接修改",
+      "testVersion": "所有修改在 app/experiments/ 进行",
+      "migration": "完成后提供迁移建议"
+    }
+  },
+  "dependencies": {
+    "core": ["next", "react", "react-dom", "typescript"],
+    "ui": ["framer-motion", "lucide-react", "tailwindcss"]
+  }
+}

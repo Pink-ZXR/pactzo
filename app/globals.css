@@ -1,26 +1,208 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 极简风格 - 莫兰迪森林绿 + 酒红点缀 (增强对比度) */
+  --primary: #3a4d42;
+  --primary-light: #5a7268;
+  --primary-dark: #2a3832;
+  
+  --secondary: #7a8f82;
+  --secondary-light: #a8b8ae;
+  --secondary-dark: #5a6e62;
+  
+  --accent: #8b3232;
+  --accent-light: #b04a4a;
+  --accent-dark: #6b2222;
+  
+  --background: #f8f7f4;
+  --background-alt: #efeeea;
+  --foreground: #2a2a2a;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #a0a0a0;
+  
+  /* 五行颜色 - 增强饱和度 */
+  --wuxing-metal: #b8b8b8;
+  --wuxing-wood: #6da060;
+  --wuxing-water: #5a9ec0;
+  --wuxing-fire: #d88a5a;
+  --wuxing-earth: #c4a276;
+  
+  --cream: #ffffff;
+  --sand: #dcdbd6;
+  --warm-gray: #888888;
+  
+  /* 阴影系统 */
+  --shadow-sm: 0 1px 3px rgba(42,42,42,0.08);
+  --shadow-md: 0 4px 12px rgba(42,42,42,0.10);
+  --shadow-lg: 0 8px 24px rgba(42,42,42,0.12);
+  --shadow-xl: 0 12px 36px rgba(42,42,42,0.16);
+  --shadow-primary: 0 4px 14px rgba(58,77,66,0.30);
+  --shadow-primary-hover: 0 8px 24px rgba(58,77,66,0.40);
+  --shadow-accent: 0 4px 14px rgba(139,50,50,0.25);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-warm-gray: var(--warm-gray);
+  /* 五行 */
+  --color-wuxing-metal: var(--wuxing-metal);
+  --color-wuxing-wood: var(--wuxing-wood);
+  --color-wuxing-water: var(--wuxing-water);
+  --color-wuxing-fire: var(--wuxing-fire);
+  --color-wuxing-earth: var(--wuxing-earth);
+  --font-sans: var(--font-noto-serif);
+  --font-display: var(--font-noto-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Serif SC", "ZCOOL SongTi", "Source Han Serif SC", "Songti SC", serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 英文字体 - Cormorant 优雅衬线 */
+.font-en {
+  font-family: var(--font-cormorant), "Cormorant", "Playfair Display", Georgia, serif;
+  font-style: italic;
+}
+
+/* 英文标题 */
+h1 .en, h2 .en, h3 .en, .title-en {
+  font-family: var(--font-cormorant), "Cormorant", "Playfair Display", Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0.1em;
+}
+
+/* 自定义滚动条 - 极简风格 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* 五行元素动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* 延迟动画 */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ========================================
+   Buly 风格备份 (用于 test-playground)
+   ======================================== */
+.soft-bg {
+  background: 
+    radial-gradient(ellipse at top right, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(184, 163, 148, 0.08) 0%, transparent 50%),
+    #FAF8F5;
+}
+
+.hand-drawn-card {
+  background: #FDF9F3;
+  border: 2px solid #E8E0D5;
+  border-radius: 20px;
+  box-shadow: 
+    4px 4px 0 #E8E0D5,
+    8px 8px 20px rgba(139, 115, 85, 0.08);
+  transition: all 0.3s ease;
+}
+
+.hand-drawn-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 
+    6px 6px 0 #E8E0D5,
+    12px 12px 30px rgba(139, 115, 85, 0.12);
+}
+
+.hand-drawn-btn {
+  background: #8B7355;
+  color: #FDF9F3;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: 
+    3px 3px 0 #6B5544,
+    6px 6px 15px rgba(139, 115, 85, 0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #8B7355 0%, #D4A574 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 页面过渡 */
+.page-transition {
+  opacity: 0;
+  animation: fade-in-up 0.5s ease-out forwards;
 }

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-03-18T08:00:58.607Z",
+  "checks": {
+    "directories": [],
+    "files": [],
+    "naming": [],
+    "imports": [
+      {
+        "type": "alias-opportunity",
+        "file": "app/page.tsx",
+        "import": "./components/sections/SocialProof",
+        "suggestion": "Use @/components/ instead of ./components/sections/SocialProof"
+      },
+      {
+        "type": "alias-opportunity",
+        "file": "app/page.tsx",
+        "import": "./components/sections/DestinySamples",
+        "suggestion": "Use @/components/ instead of ./components/sections/DestinySamples"
+      }
+    ]
+  },
+  "summary": {
+    "totalIssues": 2,
+    "status": "NEEDS_ATTENTION"
+  }
+}
