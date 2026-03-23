@@ -1,14 +1,18 @@
 /**
- * 宠物匹配算法 v2
+ * 宠物匹配算法 v3
  * 
- * @context 四维匹配模型：五行 + 天时 + 地利 + 人和
- * @version 2.0.0
+ * @context 五维匹配模型：五行 + 天时 + 地利 + 人和 + 外观
+ * @version 3.0.0 - 新增外观维度，输出Top3
  * 
- * 权重分配：
- * - 五行 20%：命理契合度
- * - 天时 20%：作息 + 精力
- * - 地利 25%：空间 + 稳定性
- * - 人和 35%：陪伴 + 情感 + 责任
+ * 权重分配（有外观偏好时）：
+ * - 五行 15%：命理契合度
+ * - 天时 18%：作息 + 精力
+ * - 地利 22%：空间 + 稳定性
+ * - 人和 30%：陪伴 + 情感 + 责任
+ * - 外观 15%：毛发 + 颜色 + 体型
+ * 
+ * 无外观偏好时，权重回归四维：
+ * - 五行 20% | 天时 20% | 地利 25% | 人和 35%
  */
 
 import type { 
@@ -18,163 +22,188 @@ import type {
   TianshiProfile,
   DiliProfile,
   RenheProfile,
+  AppearanceProfile,
   MatchReason,
 } from '@/hooks/useTestStore';
-import { PetBreed, getBreedsByCategory, getAllBreeds } from './pet-database';
+import { PetBreed, FurType, PetSize, getBreedsByCategory, getAllBreeds } from './pet-database';
 
 // ===== 配置常量 =====
 
-/** 四维权重配置 */
-const WEIGHTS = {
-  wuxing: 0.20,    // 五行权重
-  tianshi: 0.20,   // 天时权重
-  dili: 0.25,      // 地利权重
-  renhe: 0.35,     // 人和权重（最重要）
+/** 五维权重配置（有外观偏好） */
+const WEIGHTS_5D = {
+  wuxing: 0.15,
+  tianshi: 0.18,
+  dili: 0.22,
+  renhe: 0.30,
+  appearance: 0.15,
+};
+
+/** 四维权重配置（无外观偏好） */
+const WEIGHTS_4D = {
+  wuxing: 0.20,
+  tianshi: 0.20,
+  dili: 0.25,
+  renhe: 0.35,
 };
 
 /** 天时子维度权重 */
 const TIANSHI_WEIGHTS = {
-  schedule: 0.5,   // 作息
-  energy: 0.5,     // 精力
+  schedule: 0.5,
+  energy: 0.5,
 };
 
 /** 地利子维度权重 */
 const DILI_WEIGHTS = {
-  space: 0.6,      // 空间（更重要）
-  stability: 0.4,  // 稳定性
+  space: 0.6,
+  stability: 0.4,
 };
 
 /** 人和子维度权重 */
 const RENHE_WEIGHTS = {
-  companion: 0.35,     // 陪伴需求
-  attachment: 0.35,    // 情感依赖
-  responsibility: 0.30, // 责任意愿
+  companion: 0.35,
+  attachment: 0.35,
+  responsibility: 0.30,
+};
+
+/** 外观子维度权重 */
+const APPEARANCE_WEIGHTS = {
+  fur: 0.35,
+  color: 0.35,
+  size: 0.30,
 };
 
 /** 五行关系分数 */
 const WUXING_SCORES = {
-  generate: 95,  // 相生
-  same: 85,      // 同属
-  neutral: 75,   // 无关
-  restrain: 60,  // 相克
+  generate: 95,
+  same: 85,
+  neutral: 75,
+  restrain: 60,
 };
 
 // ===== 五行关系表 =====
 
-/** 相生关系：A生B */
 const WUXING_GENERATE: Record<WuxingElement, WuxingElement> = {
-  metal: 'water', // 金生水
-  water: 'wood',  // 水生木
-  wood: 'fire',   // 木生火
-  fire: 'earth',  // 火生土
-  earth: 'metal', // 土生金
+  metal: 'water',
+  water: 'wood',
+  wood: 'fire',
+  fire: 'earth',
+  earth: 'metal',
 };
 
-/** 相克关系：A克B */
 const WUXING_RESTRAIN: Record<WuxingElement, WuxingElement> = {
-  metal: 'wood',  // 金克木
-  wood: 'earth',  // 木克土
-  earth: 'water', // 土克水
-  water: 'fire',  // 水克火
-  fire: 'metal',  // 火克金
+  metal: 'wood',
+  wood: 'earth',
+  earth: 'water',
+  water: 'fire',
+  fire: 'metal',
+};
+
+// ===== 外观匹配映射 =====
+
+/** 毛发偏好映射：用户选择 → 匹配的宠物 furType */
+const FUR_PREFERENCE_MAP: Record<number, FurType[]> = {
+  1: ['long', 'wool'],          // 毛茸茸
+  2: ['short'],                  // 光滑短毛
+  3: ['hairless', 'scale', 'feather', 'shell', 'quill', 'none'], // 特殊
+};
+
+/** 颜色偏好映射：用户选择 → 匹配的 colorTags */
+const COLOR_PREFERENCE_MAP: Record<number, string[]> = {
+  1: ['橘黄', '棕色', '金色', '红色', '粉色'],  // 暖色
+  2: ['灰色', '蓝色', '银色', '绿色'],          // 冷色
+  3: ['黑色', '白色'],                           // 经典黑白
+  4: ['多彩', '斑纹'],                           // 多彩
+};
+
+/** 体型偏好映射：用户选择 → 匹配的 PetSize */
+const SIZE_PREFERENCE_MAP: Record<number, PetSize[]> = {
+  1: ['tiny'],
+  2: ['small'],
+  3: ['medium'],
+  4: ['large'],
 };
 
 // ===== 核心算法 =====
 
-/**
- * 计算五行匹配分数
- */
 function calculateWuxingScore(userWuxing: WuxingElement, petWuxing: WuxingElement): number {
-  // 同属性
-  if (userWuxing === petWuxing) {
-    return WUXING_SCORES.same;
-  }
-  
-  // 用户生宠物（用户的五行生宠物的五行）
-  if (WUXING_GENERATE[userWuxing] === petWuxing) {
-    return WUXING_SCORES.generate;
-  }
-  
-  // 宠物生用户（宠物的五行生用户的五行）
-  if (WUXING_GENERATE[petWuxing] === userWuxing) {
-    return WUXING_SCORES.generate;
-  }
-  
-  // 用户克宠物
-  if (WUXING_RESTRAIN[userWuxing] === petWuxing) {
-    return WUXING_SCORES.restrain;
-  }
-  
-  // 宠物克用户
-  if (WUXING_RESTRAIN[petWuxing] === userWuxing) {
-    return WUXING_SCORES.restrain;
-  }
-  
-  // 无关
+  if (userWuxing === petWuxing) return WUXING_SCORES.same;
+  if (WUXING_GENERATE[userWuxing] === petWuxing) return WUXING_SCORES.generate;
+  if (WUXING_GENERATE[petWuxing] === userWuxing) return WUXING_SCORES.generate;
+  if (WUXING_RESTRAIN[userWuxing] === petWuxing) return WUXING_SCORES.restrain;
+  if (WUXING_RESTRAIN[petWuxing] === userWuxing) return WUXING_SCORES.restrain;
   return WUXING_SCORES.neutral;
 }
 
-/**
- * 获取五行关系描述
- */
 function getWuxingRelation(userWuxing: WuxingElement, petWuxing: WuxingElement): string {
-  if (userWuxing === petWuxing) {
-    return '同属';
-  }
-  if (WUXING_GENERATE[userWuxing] === petWuxing || WUXING_GENERATE[petWuxing] === userWuxing) {
-    return '相生';
-  }
-  if (WUXING_RESTRAIN[userWuxing] === petWuxing || WUXING_RESTRAIN[petWuxing] === userWuxing) {
-    return '相克';
-  }
+  if (userWuxing === petWuxing) return '同属';
+  if (WUXING_GENERATE[userWuxing] === petWuxing || WUXING_GENERATE[petWuxing] === userWuxing) return '相生';
+  if (WUXING_RESTRAIN[userWuxing] === petWuxing || WUXING_RESTRAIN[petWuxing] === userWuxing) return '相克';
   return '无关';
 }
 
-/**
- * 计算天时匹配分数
- */
 function calculateTianshiScore(tianshi: TianshiProfile, pet: PetBreed): number {
   const scheduleMatch = 1 - Math.abs(tianshi.schedule - pet.schedule) / 2;
   const energyMatch = 1 - Math.abs(tianshi.energy - pet.energy) / 2;
-  
-  const score = (
-    scheduleMatch * TIANSHI_WEIGHTS.schedule +
-    energyMatch * TIANSHI_WEIGHTS.energy
-  ) * 100;
-  
-  return score;
+  return (scheduleMatch * TIANSHI_WEIGHTS.schedule + energyMatch * TIANSHI_WEIGHTS.energy) * 100;
 }
 
-/**
- * 计算地利匹配分数
- */
 function calculateDiliScore(dili: DiliProfile, pet: PetBreed): number {
   const spaceMatch = 1 - Math.abs(dili.space - pet.space) / 2;
   const stabilityMatch = 1 - Math.abs(dili.stability - pet.stability) / 2;
-  
-  const score = (
-    spaceMatch * DILI_WEIGHTS.space +
-    stabilityMatch * DILI_WEIGHTS.stability
-  ) * 100;
-  
-  return score;
+  return (spaceMatch * DILI_WEIGHTS.space + stabilityMatch * DILI_WEIGHTS.stability) * 100;
 }
 
-/**
- * 计算人和匹配分数
- */
 function calculateRenheScore(renhe: RenheProfile, pet: PetBreed): number {
   const companionMatch = 1 - Math.abs(renhe.companion - pet.companion) / 2;
   const attachmentMatch = 1 - Math.abs(renhe.attachment - pet.attachment) / 2;
   const responsibilityMatch = 1 - Math.abs(renhe.responsibility - pet.responsibility) / 2;
-  
-  const score = (
+  return (
     companionMatch * RENHE_WEIGHTS.companion +
     attachmentMatch * RENHE_WEIGHTS.attachment +
     responsibilityMatch * RENHE_WEIGHTS.responsibility
   ) * 100;
-  
-  return score;
+}
+
+/**
+ * 计算外观匹配分数
+ */
+function calculateAppearanceScore(appearance: AppearanceProfile, pet: PetBreed): number {
+  let furScore = 75; // 默认中等
+  let colorScore = 75;
+  let sizeScore = 75;
+
+  // 毛发匹配
+  if (appearance.furPreference !== 0) {
+    const matchedFurs = FUR_PREFERENCE_MAP[appearance.furPreference] || [];
+    furScore = matchedFurs.includes(pet.furType) ? 95 : 55;
+  }
+
+  // 颜色匹配
+  if (appearance.colorPreference !== 0) {
+    const matchedColors = COLOR_PREFERENCE_MAP[appearance.colorPreference] || [];
+    const hasMatch = pet.colorTags.some(tag => matchedColors.includes(tag));
+    colorScore = hasMatch ? 95 : 55;
+  }
+
+  // 体型匹配
+  if (appearance.sizePreference !== 0) {
+    const matchedSizes = SIZE_PREFERENCE_MAP[appearance.sizePreference] || [];
+    sizeScore = matchedSizes.includes(pet.size) ? 95 : 55;
+  }
+
+  return (
+    furScore * APPEARANCE_WEIGHTS.fur +
+    colorScore * APPEARANCE_WEIGHTS.color +
+    sizeScore * APPEARANCE_WEIGHTS.size
+  );
+}
+
+/**
+ * 判断是否有有效的外观偏好
+ */
+function hasAppearancePreference(appearance?: AppearanceProfile): boolean {
+  if (!appearance) return false;
+  return appearance.furPreference !== 0 || appearance.colorPreference !== 0 || appearance.sizePreference !== 0;
 }
 
 /**
@@ -190,18 +219,41 @@ function calculateTotalScore(
   tianshi: number;
   dili: number;
   renhe: number;
+  appearance?: number;
 } {
   const wuxingScore = calculateWuxingScore(userWuxing, pet.wuxing);
   const tianshiScore = calculateTianshiScore(userProfile.tianshi, pet);
   const diliScore = calculateDiliScore(userProfile.dili, pet);
   const renheScore = calculateRenheScore(userProfile.renhe, pet);
-  
-  const totalScore = 
-    wuxingScore * WEIGHTS.wuxing + 
-    tianshiScore * WEIGHTS.tianshi +
-    diliScore * WEIGHTS.dili +
-    renheScore * WEIGHTS.renhe;
-  
+
+  const useAppearance = hasAppearancePreference(userProfile.appearance);
+
+  if (useAppearance && userProfile.appearance) {
+    const appearanceScore = calculateAppearanceScore(userProfile.appearance, pet);
+    const totalScore =
+      wuxingScore * WEIGHTS_5D.wuxing +
+      tianshiScore * WEIGHTS_5D.tianshi +
+      diliScore * WEIGHTS_5D.dili +
+      renheScore * WEIGHTS_5D.renhe +
+      appearanceScore * WEIGHTS_5D.appearance;
+
+    return {
+      total: Math.round(totalScore),
+      wuxing: Math.round(wuxingScore),
+      tianshi: Math.round(tianshiScore),
+      dili: Math.round(diliScore),
+      renhe: Math.round(renheScore),
+      appearance: Math.round(appearanceScore),
+    };
+  }
+
+  // 无外观偏好，回归四维
+  const totalScore =
+    wuxingScore * WEIGHTS_4D.wuxing +
+    tianshiScore * WEIGHTS_4D.tianshi +
+    diliScore * WEIGHTS_4D.dili +
+    renheScore * WEIGHTS_4D.renhe;
+
   return {
     total: Math.round(totalScore),
     wuxing: Math.round(wuxingScore),
@@ -221,6 +273,7 @@ export interface MatchResult {
     tianshi: number;
     dili: number;
     renhe: number;
+    appearance?: number;
   };
   matchReasons: [MatchReason, MatchReason, MatchReason];
   emotionalSummary: string;
@@ -235,7 +288,7 @@ function generateMatchReasons(
   pet: PetBreed
 ): [MatchReason, MatchReason, MatchReason] {
   const reasons: { dimension: MatchReason['dimension']; text: string; score: number }[] = [];
-  
+
   // 五行原因
   const wuxingRelation = getWuxingRelation(userWuxing, pet.wuxing);
   const wuxingTexts: Record<string, string> = {
@@ -249,7 +302,7 @@ function generateMatchReasons(
     text: wuxingTexts[wuxingRelation],
     score: calculateWuxingScore(userWuxing, pet.wuxing),
   });
-  
+
   // 天时原因
   const tianshiScore = calculateTianshiScore(userProfile.tianshi, pet);
   let tianshiText = '';
@@ -261,12 +314,8 @@ function generateMatchReasons(
   if (Math.abs(userProfile.tianshi.energy - pet.energy) <= 1) {
     tianshiText = `你的精力状态与${pet.name}的活跃度很匹配`;
   }
-  reasons.push({
-    dimension: 'tianshi',
-    text: tianshiText,
-    score: tianshiScore,
-  });
-  
+  reasons.push({ dimension: 'tianshi', text: tianshiText, score: tianshiScore });
+
   // 地利原因
   const diliScore = calculateDiliScore(userProfile.dili, pet);
   let diliText = '';
@@ -277,12 +326,8 @@ function generateMatchReasons(
   } else {
     diliText = `${pet.name}在你的空间里会很舒适自在`;
   }
-  reasons.push({
-    dimension: 'dili',
-    text: diliText,
-    score: diliScore,
-  });
-  
+  reasons.push({ dimension: 'dili', text: diliText, score: diliScore });
+
   // 人和原因
   const renheScore = calculateRenheScore(userProfile.renhe, pet);
   let renheText = '';
@@ -296,15 +341,25 @@ function generateMatchReasons(
   if (Math.abs(userProfile.renhe.responsibility - pet.responsibility) <= 1) {
     renheText = `${pet.name}的照顾难度与你的投入意愿很匹配`;
   }
-  reasons.push({
-    dimension: 'renhe',
-    text: renheText,
-    score: renheScore,
-  });
-  
+  reasons.push({ dimension: 'renhe', text: renheText, score: renheScore });
+
+  // 外观原因（如果有偏好）
+  if (hasAppearancePreference(userProfile.appearance) && userProfile.appearance) {
+    const appearanceScore = calculateAppearanceScore(userProfile.appearance, pet);
+    let appearanceText = '';
+    if (appearanceScore >= 80) {
+      appearanceText = `${pet.name}的外观特征完美符合你的审美偏好`;
+    } else if (appearanceScore >= 65) {
+      appearanceText = `${pet.name}的外观与你的偏好有不少契合之处`;
+    } else {
+      appearanceText = `${pet.name}的外观独具魅力，或许会带来意外惊喜`;
+    }
+    reasons.push({ dimension: 'appearance', text: appearanceText, score: appearanceScore });
+  }
+
   // 按分数排序，选择分数最高的3个
   reasons.sort((a, b) => b.score - a.score);
-  
+
   return [
     { dimension: reasons[0].dimension, text: reasons[0].text },
     { dimension: reasons[1].dimension, text: reasons[1].text },
@@ -315,15 +370,13 @@ function generateMatchReasons(
 /**
  * 生成情绪化总结
  */
-function generateEmotionalSummary(pet: PetBreed, totalScore: number): string {
-  // 从宠物的模板中随机选择一个
+function generateEmotionalSummary(pet: PetBreed): string {
   const templates = pet.emotionalTemplates;
-  const template = templates[Math.floor(Math.random() * templates.length)];
-  return template;
+  return templates[Math.floor(Math.random() * templates.length)];
 }
 
 /**
- * 获取指定类型的最佳匹配
+ * 获取指定类型的最佳匹配（返回Top3）
  */
 export function matchPetByCategory(
   category: PetCategory,
@@ -331,46 +384,35 @@ export function matchPetByCategory(
   userProfile: UserProfile
 ): MatchResult[] {
   const breeds = getBreedsByCategory(category);
-  
+
   const results: MatchResult[] = breeds.map((breed) => {
     const scores = calculateTotalScore(userWuxing, userProfile, breed);
     const matchReasons = generateMatchReasons(userWuxing, userProfile, breed);
-    const emotionalSummary = generateEmotionalSummary(breed, scores.total);
-    
-    return {
-      breed,
-      scores,
-      matchReasons,
-      emotionalSummary,
-    };
+    const emotionalSummary = generateEmotionalSummary(breed);
+
+    return { breed, scores, matchReasons, emotionalSummary };
   });
-  
-  // 按总分排序
+
   return results.sort((a, b) => b.scores.total - a.scores.total);
 }
 
 /**
- * 获取所有类型的最佳匹配（跨类推荐）
+ * 获取所有类型的最佳匹配（跨类推荐，返回Top3）
  */
 export function matchAllPets(
   userWuxing: WuxingElement,
   userProfile: UserProfile
 ): MatchResult[] {
   const breeds = getAllBreeds();
-  
+
   const results: MatchResult[] = breeds.map((breed) => {
     const scores = calculateTotalScore(userWuxing, userProfile, breed);
     const matchReasons = generateMatchReasons(userWuxing, userProfile, breed);
-    const emotionalSummary = generateEmotionalSummary(breed, scores.total);
-    
-    return {
-      breed,
-      scores,
-      matchReasons,
-      emotionalSummary,
-    };
+    const emotionalSummary = generateEmotionalSummary(breed);
+
+    return { breed, scores, matchReasons, emotionalSummary };
   });
-  
+
   return results.sort((a, b) => b.scores.total - a.scores.total);
 }
 
@@ -394,6 +436,7 @@ export function getDimensionName(dimension: MatchReason['dimension']): string {
     tianshi: '天时相应',
     dili: '地利相宜',
     renhe: '人和相合',
+    appearance: '外观契合',
   };
   return names[dimension];
 }
@@ -407,6 +450,7 @@ export function getDimensionIcon(dimension: MatchReason['dimension']): string {
     tianshi: '🕐',
     dili: '🏠',
     renhe: '💝',
+    appearance: '🎨',
   };
   return icons[dimension];
 }

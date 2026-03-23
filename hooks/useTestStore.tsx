@@ -13,8 +13,8 @@ export interface BirthDate {
 
 export type WuxingElement = 'metal' | 'wood' | 'water' | 'fire' | 'earth';
 
-// 宠物大类（7类）
-export type PetCategory = 'cat' | 'dog' | 'rabbit' | 'small' | 'bird' | 'reptile' | 'fish';
+// 宠物大类（9类）
+export type PetCategory = 'cat' | 'dog' | 'rabbit' | 'small' | 'bird' | 'reptile' | 'fish' | 'amphibian' | 'exotic';
 
 // ===== 四维模型类型 =====
 
@@ -37,18 +37,26 @@ export interface RenheProfile {
   responsibility: 1 | 2 | 3; // 责任：1=尽量省心, 2=适度付出, 3=愿意高投入
 }
 
+// 外观偏好
+export interface AppearanceProfile {
+  furPreference: 0 | 1 | 2 | 3;    // 0=无所谓, 1=毛茸茸, 2=光滑短毛, 3=无毛/特殊
+  colorPreference: 0 | 1 | 2 | 3 | 4; // 0=无所谓, 1=暖色, 2=冷色, 3=经典黑白, 4=多彩
+  sizePreference: 0 | 1 | 2 | 3 | 4;  // 0=无所谓, 1=迷你, 2=小型, 3=中型, 4=大型
+}
+
 // 完整用户画像
 export interface UserProfile {
   tianshi: TianshiProfile;
   dili: DiliProfile;
   renhe: RenheProfile;
+  appearance?: AppearanceProfile; // 外观偏好（可选）
   climate?: 'north' | 'south' | 'other'; // 预留：气候（暂不启用）
 }
 
 // ===== 结果类型 =====
 
 export interface MatchReason {
-  dimension: 'wuxing' | 'tianshi' | 'dili' | 'renhe';
+  dimension: 'wuxing' | 'tianshi' | 'dili' | 'renhe' | 'appearance';
   text: string;
 }
 
@@ -72,6 +80,7 @@ export interface TestResult {
     tianshi: number;
     dili: number;
     renhe: number;
+    appearance?: number;
   };
   // 3条匹配原因
   matchReasons: [MatchReason, MatchReason, MatchReason];
@@ -116,6 +125,7 @@ interface TestContextType extends TestState {
   setTianshi: (tianshi: TianshiProfile) => void;
   setDili: (dili: DiliProfile) => void;
   setRenhe: (renhe: RenheProfile) => void;
+  setAppearance: (appearance: AppearanceProfile) => void;
   setPetCategory: (category: PetCategory | null) => void;
   setResult: (result: TestResult) => void;
   setCurrentStep: (step: number) => void;
@@ -175,6 +185,15 @@ export function TestProvider({ children }: { children: ReactNode }) {
     }));
   };
 
+  const setAppearance = (appearance: AppearanceProfile) => {
+    setState((prev) => ({
+      ...prev,
+      userProfile: prev.userProfile
+        ? { ...prev.userProfile, appearance }
+        : { tianshi: { schedule: 2, energy: 2 }, dili: { space: 2, stability: 2 }, renhe: { companion: 2, attachment: 2, responsibility: 2 }, appearance },
+    }));
+  };
+
   const setPetCategory = (category: PetCategory | null) => {
     setState((prev) => ({ ...prev, petCategory: category, petType: category }));
   };
@@ -209,6 +228,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
         setTianshi,
         setDili,
         setRenhe,
+        setAppearance,
         setPetCategory,
         setResult,
         setCurrentStep,

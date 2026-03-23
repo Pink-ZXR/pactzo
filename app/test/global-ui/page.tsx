@@ -6,17 +6,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
+
+// 测试页专用 - 从主版本复制并隔离
+// 全局UI调整实验版本
 
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * 百澤 BAIZE - 极简风格首页
+ * 百澤 BAIZE - 全局UI调整测试页
  * 
- * Maison Margiela 风格 + 莫兰迪森林绿
- * - 大量留白
- * - 细体字体 + 大字间距
- * - 全屏区块
+ * 实验内容：
+ * - 调整整体色彩系统
+ * - 优化间距与留白
+ * - 改进排版层次
+ * - 增强交互反馈
  */
 
 // Hero Section 专用样式
@@ -37,19 +40,6 @@ const heroStyles = `
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(2.5); opacity: 0; }
   }
-  @keyframes breath-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(26,46,42,0.08); }
-    50% { box-shadow: 0 0 20px 8px rgba(26,46,42,0.06); }
-  }
-  @keyframes line-grow {
-    0% { height: 0; opacity: 0; }
-    50% { height: 100%; opacity: 0.3; }
-    100% { height: 0; opacity: 0; }
-  }
-  @keyframes arrow-bounce {
-    0%, 100% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(5px); opacity: 1; }
-  }
   .animate-scroll-line {
     animation: scroll-line 2s ease-in-out infinite;
   }
@@ -62,37 +52,11 @@ const heroStyles = `
   .animate-scroll-float {
     animation: scroll-float 1.6s ease-in-out infinite;
   }
-  .animate-breath-glow {
-    animation: breath-glow 3s ease-in-out infinite;
-  }
-  .animate-line-grow {
-    animation: line-grow 2.4s ease-in-out infinite;
-  }
-  .animate-arrow-bounce {
-    animation: arrow-bounce 1.8s ease-in-out infinite;
-  }
-  @keyframes scroll-glow {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-  }
-  .animate-scroll-glow {
-    animation: scroll-glow 2.5s ease-in-out infinite;
-  }
 `;
 
-export default function Home() {
+export default function GlobalUITest() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hoveredCat, setHoveredCat] = useState<number | null>(null);
   
-  // Hero Section refs
-  const heroRef = useRef<HTMLDivElement>(null);
-  const watermarkRef = useRef<HTMLDivElement>(null);
-  const titlesRef = useRef<HTMLDivElement>(null);
-  const baizeRef = useRef<HTMLDivElement>(null);
-  const baizeHeadRef = useRef<HTMLDivElement>(null);
-  const baizeGhostRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
-
   // ═══════════════════════════════════════════════════════════════
   // 四维匹配体系 - GSAP ScrollTrigger refs
   // ═══════════════════════════════════════════════════════════════
@@ -109,24 +73,15 @@ export default function Home() {
   // 七种命定网格容器 ref
   const categoriesGridRef = useRef<HTMLDivElement>(null);
   const categoryItemsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  // Lenis 丝滑滚动初始化（与 GSAP ticker 联动）
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  
+  // Hero Section refs
+  const heroRef = useRef<HTMLDivElement>(null);
+  const watermarkRef = useRef<HTMLDivElement>(null);
+  const titlesRef = useRef<HTMLDivElement>(null);
+  const baizeRef = useRef<HTMLDivElement>(null);
+  const baizeHeadRef = useRef<HTMLDivElement>(null);
+  const baizeGhostRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
 
   // Hero Section GSAP 动效
   useEffect(() => {
@@ -285,6 +240,11 @@ export default function Home() {
   return (
     <>
       <style>{heroStyles}</style>
+      {/* 测试页标识 */}
+      <div className="fixed top-20 left-0 z-[100] bg-[var(--accent)] text-white text-[10px] px-3 py-1 tracking-widest">
+        GLOBAL UI TEST
+      </div>
+      
     <main className="min-h-screen bg-[var(--background)] text-[var(--primary)]">
       {/* 导航 */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--background)]/90 backdrop-blur-sm">
@@ -317,7 +277,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
               >
                 <Link 
-                  href={item === 'Begin' ? '/questionnaire/birthday' : item === 'About' ? '/about' : '/method'}
+                  href={item === 'Begin' ? '/questionnaire/birthday' : '#'}
                   className="block text-4xl md:text-6xl font-light tracking-[0.2em] uppercase hover:opacity-50 transition-opacity font-en"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -413,8 +373,8 @@ export default function Home() {
             mixBlendMode: 'multiply',
             maskImage: 'linear-gradient(to left, black 40%, transparent 85%), linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to left, black 40%, transparent 85%), linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)',
-            maskComposite: 'intersect' as React.CSSProperties['maskComposite'],
-            WebkitMaskComposite: 'destination-in' as string,
+            maskComposite: 'intersect' as any,
+            WebkitMaskComposite: 'destination-in' as any,
           }}
         >
           <Image
@@ -525,8 +485,7 @@ export default function Home() {
             }}
           >
             洞察万物生息<br />
-            基于东方五行智慧的灵宠匹配<br />
-            为你推荐最合适的陪伴
+            基于东方五行智慧的灵宠匹配
           </p>
           <h1
             className="font-black m-0"
@@ -544,75 +503,52 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* 滚动提示 — 三合一：线性引导 + 呼吸高光 + 局部背景聚焦 */}
-
-        
-
+        {/* 滚动提示 */}
         <div
-          className="hero-scroll absolute flex flex-col items-center cursor-pointer group"
+          className="hero-scroll animate-scroll-float absolute flex flex-col items-center gap-3 cursor-pointer group"
           style={{
-            bottom: '44px',
+            bottom: '50px',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 50,
           }}
-          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          {/* ③ 局部背景聚焦 — 径向光晕托底 */}
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: '120px',
-              height: '120px',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              background: 'radial-gradient(circle, rgba(31,61,54,0.08), transparent 70%)',
-              zIndex: -1,
-            }}
-          />
-
-          {/* ② 呼吸高光文字 */}
           <span
-            className="animate-scroll-glow transition-all duration-500 group-hover:tracking-[0.5em] group-hover:opacity-90"
+            className="text-[10px] uppercase transition-all duration-500 group-hover:tracking-[0.5em]"
             style={{
-              fontFamily: '"Noto Serif SC", serif',
-              fontSize: '13px',
-              letterSpacing: '0.25em',
-              color: '#1F3D36',
+              fontFamily: '"Space Mono", monospace',
+              letterSpacing: '0.3em',
+              color: 'rgba(26,46,42,0.5)',
             }}
           >
-            开始探索
+            SCROLL
           </span>
-
-          {/* ① 加长引导线 + 明确箭头 */}
-          <div className="flex flex-col items-center" style={{ marginTop: '12px' }}>
+          <div className="relative w-px h-12 overflow-hidden">
             <div
+              className="absolute w-full animate-scroll-line"
               style={{
-                width: '1px',
-                height: '60px',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), transparent)',
+                height: '100%',
+                background: 'linear-gradient(to bottom, #1A2E2A 0%, transparent 80%)',
               }}
             />
-            <span
-              className="animate-scroll-float"
-              style={{
-                fontSize: '14px',
-                color: 'rgba(0,0,0,0.5)',
-                marginTop: '8px',
-                animationDelay: '0.3s',
-              }}
-            >
-              ↓
-            </span>
+          </div>
+          <div className="relative">
+            <div
+              className="w-2 h-2 rounded-full animate-pulse-dot"
+              style={{ backgroundColor: '#1A2E2A' }}
+            />
+            <div
+              className="absolute inset-0 w-2 h-2 rounded-full animate-pulse-ring"
+              style={{ border: '1px solid #1A2E2A' }}
+            />
           </div>
         </div>
       </section>
 
-      {/* ═════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           四维匹配体系 - Godly风格门户粘性布局
           左栏：粘性标题区 (4列) | 右栏：滚动内容区 (8列)
-          ═════════════════════════════════════════════════════════════ */}
+          ═══════════════════════════════════════════════════════════════ */}
       <section ref={dimensionsSectionRef} className="py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           {/* 大屏：4:8 栅格布局 */}
@@ -787,129 +723,209 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═════════════════════════════════════════════════════════════
-          你的契合之选 - 白玉牌效果重构
+      {/* ═══════════════════════════════════════════════════════════════
+          七种命定 - 白玉牌效果重构
           暖灰底色隔离 + 纯白方块 + 垂直居中放大 + 强烈悬停动效
-          ═════════════════════════════════════════════════════════════ */}
+          ═══════════════════════════════════════════════════════════════ */}
       <section className="py-32 md:py-40 lg:py-48 px-6 md:px-12 lg:px-20 bg-[#F9F8F6]">
         <div className="max-w-7xl mx-auto">
-          {/* 区块标题 - Chinese Main Actor, English Decorative */}
+          {/* 区块标题 - 大幅放大 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-24 text-center"
           >
-            {/* English subtitle ABOVE - decorative, faint */}
-            <p className="font-en-decorative text-[10px] mb-6">
+            <p className="text-sm md:text-base tracking-[0.3em] text-gray-400 mb-6 font-en uppercase font-medium">
               CATEGORIES
             </p>
-            {/* Chinese title - Bold, High Contrast */}
-            <h2 className="font-zh-title text-4xl md:text-5xl lg:text-6xl">
-              你的契合之选
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.12em] text-gray-900">
+              七种命定
             </h2>
           </motion.div>
 
-          {/* ═══ Asymmetrical Staggered Grid — 5 cols, 2 rows ═══ */}
-          <div ref={categoriesGridRef} className="grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-6">
-            {([
-              { icon: '○', en: 'CAT',     zh: '猫咪',   idx: 0 },
-              { icon: '△', en: 'DOG',     zh: '狗狗',   idx: 1 },
-              { icon: '◇', en: 'RABBIT',  zh: '兔子',   idx: 2 },
-              { icon: '□', en: 'SMALL',   zh: '小宠',   idx: 3 },
-              { icon: '✕', en: 'BIRD',    zh: '鸟类',   idx: 4 },
-              { icon: '◐', en: 'REPTILE', zh: '爬宠',   idx: 5 },
-              { icon: '◎', en: 'FISH',    zh: '水族',   idx: 6 },
-              { icon: '◑', en: 'AMPHIBIAN', zh: '两栖', idx: 7 },
-              { icon: '✦', en: 'EXOTIC',  zh: '异宠',   idx: 8 },
-              { icon: '?', en: 'ALL',     zh: '跨类推荐', idx: 9 },
-            ] as { icon: string; en: string; zh: string; idx: number }[]).map((cat, index) => {
-              const isEvenCol = (index % 5) % 2 === 1; // 偶数列
-              return (
-                <motion.div
-                  key={cat.en}
-                  ref={el => { categoryItemsRef.current[cat.idx] = el; }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1], delay: index * 0.05 }}
-                  animate={{ opacity: hoveredCat !== null && hoveredCat !== cat.idx ? 0.3 : 1 }}
-                  onMouseEnter={() => setHoveredCat(cat.idx)}
-                  onMouseLeave={() => setHoveredCat(null)}
-                  className={`group cursor-pointer ${isEvenCol ? 'md:mt-10' : ''}`}
-                >
-                  <div
-                    className={`relative w-full flex flex-col items-center justify-center overflow-hidden
-                      transition-all duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)]
-                      ${
-                        hoveredCat === cat.idx
-                          ? 'bg-[#E0EAE9] scale-[1.05] shadow-[0_20px_40px_rgba(0,0,0,0.06)]'
-                          : 'bg-transparent'
-                      }`}
-                    style={{ aspectRatio: '1 / 1.6' }} // Tarot ratio
-                  >
-                    {/* Top border line */}
-                    <div className="absolute top-0 left-0 right-0 h-px bg-[#1A1A1A]/[0.06]" />
+          {/* ═══ 网格布局：白玉牌效果 ═══ */}
+          <div ref={categoriesGridRef} className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+            
+            {/* CAT */}
+            <div
+              ref={el => { categoryItemsRef.current[0] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              {/* 几何图标 - 极大放大 */}
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ○
+              </div>
+              {/* 英文 - 放大加粗 */}
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                CAT
+              </p>
+              {/* 中文 - 字号适中颜色浅 */}
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                猫咪
+              </p>
+            </div>
 
-                    <span className="absolute top-5 left-5 text-[9px] tracking-[0.3em] opacity-20 font-en"
-                      style={{ fontFamily: "'Space Mono', monospace" }}
-                    >
-                      {(index + 1).toString().padStart(2, '0')}
-                    </span>
+            {/* DOG */}
+            <div
+              ref={el => { categoryItemsRef.current[1] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ◇
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                DOG
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                狗狗
+              </p>
+            </div>
 
-                    {/* Geometric icon — ultra-thin 0.5px stroke style */}
-                    <span
-                      style={{
-                        fontSize: '80px',
-                        fontWeight: 100,
-                        lineHeight: 1,
-                        marginBottom: '24px',
-                        display: 'block',
-                        transition: 'all 0.8s cubic-bezier(0.19, 1, 0.22, 1)',
-                        color: hoveredCat === cat.idx ? '#7A2E2E' : 'rgba(26,26,26,0.08)',
-                        transform: hoveredCat === cat.idx ? 'translateY(-8px)' : 'none',
-                        fontFamily: "'Inter', sans-serif",
-                      }}
-                    >
-                      {cat.icon}
-                    </span>
+            {/* RABBIT */}
+            <div
+              ref={el => { categoryItemsRef.current[2] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                △
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                RABBIT
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                兔子
+              </p>
+            </div>
 
-                    <div className="text-center mt-4 space-y-3">
-                      {/* Chinese Main - Semibold, 100% opacity */}
-                      <div
-                        className="text-xl font-semibold tracking-[0.2em]"
-                        style={{
-                          fontFamily: "'PingFang SC', 'Microsoft YaHei', 'Noto Serif SC', sans-serif",
-                          fontWeight: 600,
-                          color: hoveredCat === cat.idx ? '#7A2E2E' : '#1A1A1A',
-                          opacity: 1,
-                          transition: 'color 0.5s ease',
-                        }}
-                      >
-                        {cat.zh}
-                      </div>
-                      {/* English Sub - 9px italic, faint ghost; fade in on hover */}
-                      <div
-                        className="font-en-label"
-                        style={{
-                          fontFamily: "'Playfair Display', 'Cormorant', serif",
-                          fontStyle: 'italic',
-                          fontWeight: 300,
-                          fontSize: '9px',
-                          letterSpacing: '0.4em',
-                          color: hoveredCat === cat.idx ? 'rgba(26,26,26,0.5)' : 'rgba(26,26,26,0.2)',
-                          textTransform: 'uppercase',
-                          transition: 'color 0.6s cubic-bezier(0.19,1,0.22,1)',
-                          marginTop: '10px',
-                        }}
-                      >
-                        {cat.en}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+            {/* SMALL */}
+            <div
+              ref={el => { categoryItemsRef.current[3] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                □
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                SMALL
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                小宠
+              </p>
+            </div>
+
+            {/* BIRD */}
+            <div
+              ref={el => { categoryItemsRef.current[4] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ◁
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                BIRD
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                鸟类
+              </p>
+            </div>
+
+            {/* REPTILE */}
+            <div
+              ref={el => { categoryItemsRef.current[5] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ▽
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                REPTILE
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                爬宠
+              </p>
+            </div>
+
+            {/* FISH */}
+            <div
+              ref={el => { categoryItemsRef.current[6] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ◎
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                FISH
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                水族
+              </p>
+            </div>
+
+            {/* ALL */}
+            <div
+              ref={el => { categoryItemsRef.current[7] = el; }}
+              className="group relative bg-white border border-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] 
+                         p-6 md:p-8 aspect-square 
+                         hover:shadow-2xl hover:-translate-y-3
+                         transition-all duration-500 ease-out cursor-pointer overflow-hidden
+                         flex flex-col justify-center items-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-4xl md:text-5xl text-gray-300 
+                              group-hover:text-gray-800 group-hover:scale-110
+                              transition-all duration-500 ease-out mb-6">
+                ✦
+              </div>
+              <p className="text-xl md:text-2xl tracking-[0.25em] text-gray-800 font-bold font-en mb-3">
+                ALL
+              </p>
+              <p className="text-base md:text-lg tracking-[0.2em] text-gray-500 font-light">
+                跨类推荐
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -921,7 +937,6 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-sm md:text-base font-light leading-loose text-[var(--text-secondary)] tracking-wide">
               百澤相信，人与宠物的相遇并非偶然。
@@ -977,15 +992,8 @@ export default function Home() {
               <p className="text-sm leading-relaxed text-[var(--text-secondary)] mb-8">
                 仅需 2 分钟，开启你的缘分之旅。
               </p>
-              <Link href="/questionnaire/birthday" className="group/cta relative inline-block px-10 py-4 transition-all duration-500 hover:translate-y-[-2px]">
-                {/* 双层边框 - 外层深绿 + 内层浅绿 */}
-                <span className="absolute inset-0 border-2 border-[#1A2E2A] transition-all duration-500 group-hover/cta:border-[#1A2E2A]" />
-                <span className="absolute inset-[5px] border border-[#1A2E2A]/15 transition-all duration-500 group-hover/cta:border-[#1A2E2A]/30" />
-                {/* 悬停填充 */}
-                <span className="absolute inset-0 bg-[#1A2E2A]/0 group-hover/cta:bg-[#1A2E2A]/[0.04] transition-all duration-500" />
-                <span className="relative text-xs tracking-[0.3em] uppercase text-[#1A2E2A] font-medium">
-                  Discover More
-                </span>
+              <Link href="/questionnaire/birthday" className="text-xs tracking-[0.3em] uppercase text-[var(--primary)] border-b border-[var(--primary)] pb-1 hover:opacity-50 transition-opacity">
+                Discover More
               </Link>
             </motion.div>
           </div>
@@ -1042,20 +1050,13 @@ export default function Home() {
             >
               <p className="text-sm italic text-[var(--text-secondary)] mb-6">Destiny / awaits</p>
               <p className="text-sm leading-relaxed text-[var(--foreground)] mb-4">
-                百澤，通万物之情，知鬼神之事。我们以百澤为名，愿成为连接你与命定之宠的桥梁。
+                白泽，通万物之情，知鬼神之事。我们以白泽为名，愿成为连接你与命定之宠的桥梁。
               </p>
               <p className="text-sm leading-relaxed text-[var(--text-secondary)] mb-8">
                 每一次匹配，都是一段新故事的开始。
               </p>
-              <Link href="/questionnaire/birthday" className="group/cta relative inline-block px-10 py-4 transition-all duration-500 hover:translate-y-[-2px]">
-                {/* 双层边框 - 外层深绿 + 内层浅色 */}
-                <span className="absolute inset-0 border-2 border-[#1A2E2A] bg-[#1A2E2A] transition-all duration-500" />
-                <span className="absolute inset-[5px] border border-white/40 transition-all duration-500 group-hover/cta:border-white/55" />
-                {/* 悬停底部阴影 */}
-                <span className="absolute -bottom-2 -right-2 w-full h-full bg-[#1A2E2A]/10 -z-10 transition-all duration-500 group-hover/cta:translate-x-1 group-hover/cta:translate-y-1" />
-                <span className="relative text-xs tracking-[0.3em] uppercase text-white font-medium">
-                  Start Journey
-                </span>
+              <Link href="/questionnaire/birthday" className="text-xs tracking-[0.3em] uppercase text-[var(--primary)] border-b border-[var(--primary)] pb-1 hover:opacity-50 transition-opacity">
+                Start Journey
               </Link>
             </motion.div>
           </div>
@@ -1063,22 +1064,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="py-16 px-6 md:px-12 border-t border-[var(--sand)]"
-      >
+      <footer className="py-16 px-6 md:px-12 border-t border-[var(--sand)]">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-xs tracking-[0.3em] text-[var(--text-muted)]">
-            百澤 PACTZO &copy; 2026
+            百澤 BAIZE &copy; {new Date().getFullYear()}
           </p>
           <p className="text-xs tracking-[0.1em] text-[var(--text-muted)]">
             测试结果仅供参考，选择宠物请结合实际情况
           </p>
         </div>
-      </motion.footer>
+      </footer>
     </main>
     </>
   );

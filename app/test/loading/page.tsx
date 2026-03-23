@@ -4,9 +4,14 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useTest } from '@/hooks/useTestStore';
+import { calculateWuxing, getWuxingInfo } from '@/lib/wuxing';
+import { matchPetByCategory, matchAllPets } from '@/lib/matching';
+import type { TestResult, UserProfile, PetCategory, BirthDate } from '@/hooks/useTestStore';
 
 /**
  * 极简风格 - 加载页
+ * 从 sessionStorage 读取数据，执行匹配算法并存储结果
  */
 
 const loadingSteps = [
@@ -19,10 +24,104 @@ const loadingSteps = [
 
 export default function LoadingPage() {
   const router = useRouter();
+  const { setResult } = useTest();
   const [currentStep, setCurrentStep] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isCalculating, setIsCalculating] = useState(true);
 
+  // 执行匹配算法
   useEffect(() => {
+    // 从 sessionStorage 读取数据
+    const birthdateStr = sessionStorage.getItem('birthdate');
+    const tianshiStr = sessionStorage.getItem('tianshi');
+    const diliStr = sessionStorage.getItem('dili');
+    const renheStr = sessionStorage.getItem('renhe');
+    const petCategoryStr = sessionStorage.getItem('pet_category');
+    const appearanceStr = sessionStorage.getItem('appearance');
+
+    if (!birthdateStr || !tianshiStr || !diliStr || !renheStr) {
+      // 数据不完整，返回问卷开始页
+      router.push('/test/questionnaire/birthday');
+      return;
+    }
+
+    // 解析数据
+    const birthDate: BirthDate = JSON.parse(birthdateStr);
+    const tianshi = JSON.parse(tianshiStr);
+    const dili = JSON.parse(diliStr);
+    const renhe = JSON.parse(renheStr);
+    const petCategory: PetCategory | null = petCategoryStr && petCategoryStr !== 'all' 
+      ? petCategoryStr as PetCategory 
+      : null;
+    const appearancePreference = appearanceStr 
+      ? JSON.parse(appearanceStr) 
+      : undefined;
+
+    // 构建用户画像
+    const userProfile: UserProfile = {
+      tianshi: {
+        schedule: tianshi.schedule as 1 | 2 | 3,
+        energy: tianshi.energy as 1 | 2 | 3,
+      },
+      dili: {
+        space: dili.space as 1 | 2 | 3,
+        stability: dili.stability as 1 | 2 | 3,
+      },
+      renhe: {
+        companion: renhe.companion as 1 | 2 | 3,
+        attachment: renhe.attachment as 1 | 2 | 3,
+        responsibility: renhe.responsibility as 1 | 2 | 3,
+      },
+    };
+
+    // 计算五行属性
+    const wuxingElement = calculateWuxing(birthDate.year, birthDate.month, birthDate.day);
+    const wuxingInfo = getWuxingInfo(wuxingElement);
+
+    // 执行匹配算法
+    const matchResults = petCategory 
+      ? matchPetByCategory(petCategory, wuxingElement, userProfile)
+      : matchAllPets(wuxingElement, userProfile);
+
+    // 获取最佳匹配
+    const bestMatch = matchResults[0];
+
+    // 构建其他候选列表（2-4名）
+    const alternatives = matchResults.slice(1, 5).map(r => ({
+      id: r.breed.id,
+      name: r.breed.name,
+      category: r.breed.category,
+      score: r.scores.total,
+    }));
+
+    // 构建完整的测试结果
+    const testResult: TestResult = {
+      wuxingElement,
+      wuxingDescription: wuxingInfo.description,
+      recommendedPet: {
+        id: bestMatch.breed.id,
+        name: bestMatch.breed.name,
+        nameEn: bestMatch.breed.nameEn,
+        category: bestMatch.breed.category,
+        categoryName: getCategoryName(bestMatch.breed.category),
+        description: bestMatch.breed.description,
+        traits: bestMatch.breed.traits,
+      },
+      matchScore: bestMatch.scores,
+      matchReasons: bestMatch.matchReasons,
+      emotionalSummary: bestMatch.emotionalSummary,
+      alternatives,
+    };
+
+    // 存储结果到 store
+    setResult(testResult);
+    setIsCalculating(false);
+  }, [setResult, router]);
+
+  // 进度动画
+  useEffect(() => {
+    if (isCalculating) return;
+
     const stepInterval = setInterval(() => {
       setCurrentStep((prev) => {
         if (prev < loadingSteps.length - 1) {
@@ -42,7 +141,7 @@ export default function LoadingPage() {
     }, 60);
 
     const timeout = setTimeout(() => {
-      router.push('/test/result/v3');
+      router.push('/test/result');
     }, 3500);
 
     return () => {
@@ -50,7 +149,21 @@ export default function LoadingPage() {
       clearInterval(progressInterval);
       clearTimeout(timeout);
     };
-  }, [router]);
+  }, [isCalculating, router]);
+
+  // 获取宠物类别中文名
+  function getCategoryName(category: string): string {
+    const names: Record<string, string> = {
+      cat: '猫咪',
+      dog: '狗狗',
+      rabbit: '兔子',
+      small: '小宠',
+      bird: '鸟类',
+      reptile: '爬宠',
+      fish: '水族',
+    };
+    return names[category] || category;
+  }
 
   return (
     <main className="min-h-screen bg-[var(--primary)] text-white flex flex-col justify-center items-center px-6">

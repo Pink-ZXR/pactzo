@@ -1,13 +1,15 @@
 'use client';
 
+import { TestProvider } from '@/hooks/useTestStore';
+
 /**
  * 测试流程 Layout - 极简风格
- * 无额外装饰，各页面自行管理样式
+ * 包含 TestProvider 以支持状态管理
  */
 export default function TestLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <TestProvider>{children}</TestProvider>;
 }

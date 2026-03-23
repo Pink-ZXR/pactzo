@@ -16,6 +16,7 @@ export const imageRegistry = {
   hero: {
     'hero-baize': '/hero-baize.png',
     'hero-chinese': '/hero-chinese.png',
+    'baize-divine': '/illustrations/hero/baize-divine.png',
   },
   // 宠物插画 - 用于匹配结果展示
   pets: {

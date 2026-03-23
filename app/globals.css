@@ -78,21 +78,126 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ========================================
+   GLOBAL TYPOGRAPHY HIERARCHY
+   Chinese = Main Actor, English = Supporting
+   ======================================== */
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Noto Serif SC", "ZCOOL SongTi", "Source Han Serif SC", "Songti SC", serif;
+  /* Primary Sans for Chinese, Serif for English */
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", "Inter", sans-serif;
   min-height: 100vh;
   line-height: 1.6;
+  letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* FORCE Chinese text opacity to 1 - never grayed out */
+*:lang(zh),
+*:lang(zh-CN),
+*[class*="zh-"],
+.font-zh {
+  opacity: 1 !important;
+  font-weight: 500; /* Medium as base */
+}
+
+/* Chinese Titles - Bold, High Contrast */
+.font-zh-title {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", sans-serif;
+  font-weight: 700; /* Bold */
+  letter-spacing: 0.12em;
+  color: #1A1A1A;
+  opacity: 1 !important;
+}
+
+/* Chinese Subtitle - Semibold */
+.font-zh-subtitle {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", sans-serif;
+  font-weight: 600; /* Semibold */
+  letter-spacing: 0.08em;
+  color: #1A1A1A;
+  opacity: 1 !important;
+}
+
+/* Chinese Body - Medium weight minimum */
+.font-zh-body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", sans-serif;
+  font-weight: 500; /* Medium */
+  letter-spacing: 0.05em;
+  color: #1A1A1A;
+  opacity: 1 !important;
+}
+
+/* English Decorative - Light, Italic, Faint */
+.font-en-decorative {
+  font-family: "Playfair Display", "Cormorant", Georgia, serif;
+  font-style: italic;
+  font-weight: 300; /* Light */
+  letter-spacing: 0.5em;
+  color: rgba(26, 26, 26, 0.3);
+  text-transform: uppercase;
+}
+
+/* English Label - Small, Uppercase, Faint Ghost */
+.font-en-label {
+  font-family: "Playfair Display", "Cormorant", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  color: rgba(26, 26, 26, 0.2);  /* ghost: 20% */
+  text-transform: uppercase;
+  margin-top: 10px;              /* Spatial separation from Chinese */
+  transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Hover: English fades in to 50%, never reaches Chinese boldness */
+.group:hover .font-en-label,
+.font-en-label:hover {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+/* Numbers - Playfair Display */
+.font-number {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
 }
 
 /* 英文字体 - Cormorant 优雅衬线 */
 .font-en {
   font-family: var(--font-cormorant), "Cormorant", "Playfair Display", Georgia, serif;
   font-style: italic;
+}
+
+/* Playfair Display - 大标题衬线 */
+.font-playfair {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-rendering: optimizeLegibility;
+}
+
+/* Inter - 标签/正文无衬线 */
+.font-inter {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+.font-inter-label {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.font-inter-body {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 /* 英文标题 */
