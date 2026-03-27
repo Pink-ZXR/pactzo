@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* 极简风格 - 莫兰迪森林绿 + 酒红点缀 (增强对比度) */

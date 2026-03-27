@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 /* ─── Constants ─── */
-const TRANSITION = { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] };
+const TRANSITION = { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] };
 
 const YEARS = Array.from({ length: 96 }, (_, i) => String(2025 - i));
 const MONTHS = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, '0'));
@@ -216,7 +216,6 @@ export default function BirthdayPage() {
           <Link href="/" className="font-inter-label text-[9px] opacity-50 hover:opacity-100 hover:text-[#7A2E2E] transition-all duration-300">
             百澤
           </Link>
-          <span className="font-inter text-[10px] tracking-[0.3em] text-[#1A1A1A]/30 font-light">01 / 07</span>
         </div>
       </nav>
 
@@ -339,11 +338,6 @@ export default function BirthdayPage() {
             />
           </motion.div>
         </div>
-      </div>
-
-      {/* Background ghost number */}
-      <div className="absolute right-[6%] md:right-[10%] bottom-[10%] text-[20vh] md:text-[25vh] font-playfair italic opacity-[0.02] pointer-events-none select-none">
-        01
       </div>
 
       {/* Faint side text */}

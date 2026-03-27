@@ -8,11 +8,13 @@
 'use client';
 
 import { useEffect, useState, useRef, useCallback } from 'react';
+import Image from 'next/image';
 import { motion, useMotionValue, useSpring, useTransform, useSpring as useFramerSpring, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { calculateWuxing, WUXING_NAMES } from '@/lib/wuxing';
 import { matchPetByCategory, matchAllPets, type MatchResult } from '@/lib/matching';
 import { PET_CATEGORIES } from '@/lib/pet-database';
+import { getPetAvatar } from '@/lib/pet-avatars';
 import type { UserProfile, PetCategory, WuxingElement, AppearanceProfile } from '@/hooks/useTestStore';
 import html2canvas from 'html2canvas';
 
@@ -640,8 +642,18 @@ export default function ResultPage() {
                       <span style={{ fontFamily: "var(--font-inter), 'Inter', sans-serif", fontWeight: 400, fontSize: '10px', letterSpacing: '0.4em', opacity: 0.4 }}>RANK_01</span>
                     </div>
 
-                    {/* Animal Name — Chinese is Main Actor */}
+                    {/* Pet Avatar + Name Row */}
                     <div className="flex-1 flex flex-col justify-center">
+                      {/* Avatar */}
+                      <div className="relative w-24 h-24 md:w-32 md:h-32 mb-6 rounded-full overflow-hidden bg-gradient-to-br from-[#E8E0D5] to-[#D4C8B8] shadow-lg">
+                        <Image
+                          src={getPetAvatar(match.breed.id)}
+                          alt={match.breed.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 96px, 128px"
+                        />
+                      </div>
                       {/* English — decorative ghost above */}
                       <p className="mb-2 italic" style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif", fontWeight: 300, fontSize: '11px', letterSpacing: '0.35em', color: 'rgba(26,26,26,0.25)', textTransform: 'uppercase' }}>
                         {match.breed.nameEn}
@@ -769,9 +781,19 @@ export default function ResultPage() {
                       <span style={{ fontFamily: "var(--font-inter), 'Inter', sans-serif", fontWeight: 400, fontSize: '10px', letterSpacing: '0.4em', opacity: 0.4 }}>RANK_0{idx + 1}</span>
                     </div>
 
-                    {/* Animal Name + Score */}
-                    <div className="flex items-end justify-between mb-4">
-                      <div>
+                    {/* Avatar + Animal Name + Score */}
+                    <div className="flex items-start gap-4 mb-4">
+                      {/* Small Avatar */}
+                      <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#E8E0D5] to-[#D4C8B8] shadow-md">
+                        <Image
+                          src={getPetAvatar(match.breed.id)}
+                          alt={match.breed.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 64px, 80px"
+                        />
+                      </div>
+                      <div className="flex-1">
                         {/* English — ghost above */}
                         <p className="italic mb-1" style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif", fontWeight: 300, fontSize: '10px', letterSpacing: '0.35em', color: 'rgba(26,26,26,0.25)', textTransform: 'uppercase' }}>
                           {match.breed.nameEn}
@@ -1300,6 +1322,30 @@ export default function ResultPage() {
                         className="relative pb-3 text-left transition-all duration-500"
                         style={{ transform: isActive ? 'scale(1.15)' : 'scale(1)', transformOrigin: 'bottom left' }}
                       >
+                        {/* 宠物头像 */}
+                        <div
+                          className="mb-2 transition-all duration-500"
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            borderRadius: '50%',
+                            overflow: 'hidden',
+                            opacity: isActive ? 1 : 0.5,
+                            border: isActive ? '2px solid #1A1A1A' : '2px solid transparent',
+                          }}
+                        >
+                          {pet && (
+                            <img
+                              src={getPetAvatar(pet.breed.id)}
+                              alt={pet.breed.name}
+                              style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                              }}
+                            />
+                          )}
+                        </div>
                         <span
                           className="block transition-all duration-500"
                           style={{
@@ -1440,8 +1486,24 @@ export default function ResultPage() {
                       y: sealContentY,
                     }}
                   >
+                    {/* 宠物头像 */}
+                    <div className="mt-4 mb-4">
+                      <img
+                        src={getPetAvatar(best.breed.id)}
+                        alt={best.breed.name}
+                        style={{
+                          width: '80px',
+                          height: '80px',
+                          objectFit: 'cover',
+                          borderRadius: '50%',
+                          border: '2px solid rgba(26,26,26,0.1)',
+                          boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                        }}
+                      />
+                    </div>
+
                     {/* 宠物名 */}
-                    <div className="mt-6">
+                    <div className="mt-2">
                       <span
                         className="italic text-[12px] tracking-[0.12em] block mb-2"
                         style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif", color: '#1A1A1A', opacity: 0.28 }}
@@ -1697,6 +1759,22 @@ export default function ResultPage() {
             <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '15px', letterSpacing: '0.25em', color: '#8B7355', fontWeight: 700, marginBottom: '14px' }}>
               {generateDestinyId(birthYear, birthMonth, birthDay, best.breed.id).replace('#', 'NO. ')} / {best.breed.nameEn?.toUpperCase()}
             </p>
+
+            {/* 宠物头像 */}
+            <div style={{ marginBottom: '24px' }}>
+              <img
+                src={getPetAvatar(best.breed.id)}
+                alt={best.breed.name}
+                style={{
+                  width: '160px',
+                  height: '160px',
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  border: '3px solid rgba(139, 115, 85, 0.3)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+                }}
+              />
+            </div>
 
             {/* 中文宠物名 */}
             <p style={{ fontSize: '68px', fontWeight: 700, color: '#1A2E2A', letterSpacing: '0.12em', lineHeight: 1.1, marginBottom: '40px', fontFamily: "'Noto Serif SC', serif" }}>

@@ -31,7 +31,7 @@ const STEPS = [
   },
 ];
 
-const TRANSITION = { duration: 1.2, ease: [0.19, 1, 0.22, 1] as [number, number, number, number] };
+const TRANSITION = { duration: 0.6, ease: [0.19, 1, 0.22, 1] as [number, number, number, number] };
 
 export default function TianshiPage() {
   const router = useRouter();
@@ -113,7 +113,6 @@ export default function TianshiPage() {
             </button>
           ))}
         </div>
-        <div className="font-inter-label text-[10px] opacity-20">Step 02</div>
       </footer>
 
       {/* 主舞台 (横向平移) */}
@@ -130,14 +129,14 @@ export default function TianshiPage() {
             <div className="w-full grid grid-cols-1 md:grid-cols-[40%_60%] items-center gap-12 md:gap-8">
               {/* 左侧：标题 */}
               <div className="relative overflow-hidden">
-                <AnimatePresence mode="wait">
+                <AnimatePresence>
                   {activeStep === index && (
                     <motion.div
                       key={`title-${s.id}`}
                       initial={{ opacity: 0, x: -40 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 40 }}
-                      transition={{ ...TRANSITION, delay: 0.2 }}
+                      transition={{ ...TRANSITION, delay: 0.1 }}
                       className="border-l-[1.5px] border-[#1A1A1A] pl-10 md:pl-12 lg:pl-16"
                     >
                       <span className="font-inter-label block text-[9px] opacity-30 mb-6 md:mb-8">
@@ -163,7 +162,7 @@ export default function TianshiPage() {
                       key={opt.value}
                       initial={{ opacity: 0, y: 20 }}
                       animate={activeStep === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                      transition={{ ...TRANSITION, delay: 0.4 + optIdx * 0.08 }}
+                      transition={{ ...TRANSITION, delay: 0.15 + optIdx * 0.05 }}
                       onClick={() => !selectedValue && handleSelect(opt.value)}
                       className={`group relative w-full text-left py-7 md:py-8 border-b border-black/[0.06] transition-all duration-500
                         ${isSelected ? 'translate-x-[15px]' : 'hover:translate-x-[15px]'}`}
@@ -193,10 +192,6 @@ export default function TianshiPage() {
               </div>
             </div>
 
-            {/* 背景装饰编号 */}
-            <div className="absolute right-[6%] md:right-[10%] bottom-[10%] md:bottom-[12%] text-[20vh] md:text-[25vh] font-playfair italic opacity-[0.02] pointer-events-none select-none">
-              0{index + 1}
-            </div>
           </section>
         ))}
       </motion.main>

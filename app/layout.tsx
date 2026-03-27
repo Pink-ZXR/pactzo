@@ -40,7 +40,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=Space+Mono&family=ZCOOL+SongTi&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${cormorant.variable} ${playfair.variable} ${inter.variable} antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)]`}
+        className={`${cormorant.variable} ${playfair.variable} ${inter.variable} antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] relative`}
       >
         {children}
       </body>

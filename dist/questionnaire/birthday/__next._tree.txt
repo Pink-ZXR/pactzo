@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/f0b044f67465af4e.css","style"]
+:HL["/_next/static/media/2a65768255d6b625-s.p.d19752fb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/61f83d1116c3c119-s.p.8bb7ebb8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/daa29454a3e61cb2-s.p.ae97aa8d.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=Space+Mono&family=ZCOOL+SongTi&family=ZCOOL+XiaoWei&display=swap","style"]
+0:{"buildId":"iL-LGV73N54UDCJ6T7km_","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"questionnaire","paramType":null,"paramKey":"questionnaire","hasRuntimePrefetch":false,"slots":{"children":{"name":"birthday","paramType":null,"paramKey":"birthday","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

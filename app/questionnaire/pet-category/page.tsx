@@ -161,9 +161,6 @@ export default function PetCategoryPage() {
           </div>
         </div>
 
-        <div className="absolute right-[6%] md:right-[10%] bottom-[10%] md:bottom-[12%] text-[20vh] md:text-[25vh] font-playfair italic opacity-[0.02] pointer-events-none select-none">
-          06
-        </div>
       </div>
     </div>
   );
