@@ -5943,38 +5943,6 @@ const PET_DATABASE = [
         ]
     },
     {
-        id: 'exotic-sugar-glider',
-        name: '蜜袋鼯',
-        nameEn: 'Sugar Glider',
-        category: 'exotic',
-        categoryName: '异宠',
-        wuxing: 'wood',
-        schedule: 1,
-        energy: 2,
-        space: 2,
-        stability: 3,
-        companion: 3,
-        attachment: 3,
-        responsibility: 2,
-        furType: 'short',
-        colorTags: [
-            '灰色',
-            '白色'
-        ],
-        size: 'tiny',
-        traits: [
-            '粘人',
-            '夜行',
-            '会滑翔',
-            '社群性'
-        ],
-        description: '蜜袋鼯可以从高处滑翔，极其粘人，认主后喜欢待在主人口袋里。',
-        emotionalTemplates: [
-            '蜜袋鼯会从高处滑翔到你身上，用最特别的方式告诉你：我信任你。',
-            '它小小的身体窝在你口袋里时，你会感到一种被依赖的幸福。'
-        ]
-    },
-    {
         id: 'exotic-fox',
         name: '宠物狐狸',
         nameEn: 'Domesticated Fox',
@@ -6546,6 +6514,9 @@ function getDimensionIcon(dimension) {
 const PET_AVATARS = {
     // ===== 猫咪 =====
     // 已有头像 (28种)
+    'cat-british-shorthair': '/pets/avatars/cat-british-blue.png',
+    'cat-american-shorthair': '/pets/avatars/cat-american-tabby.png',
+    'cat-orange': '/pets/avatars/cat-chinese-orange.png',
     'cat-ragdoll': '/pets/avatars/cat-ragdoll.png',
     'cat-siamese': '/pets/avatars/cat-siamese.png',
     'cat-scottish-fold': '/pets/avatars/cat-scottish-fold.png',
@@ -6642,6 +6613,14 @@ const PET_AVATARS = {
     'rabbit-holland-lop': '/pets/avatars/rabbit-holland-lop.png',
     'rabbit-dwarf': '/pets/avatars/rabbit-dwarf.png',
     'rabbit-dutch': '/pets/avatars/rabbit-dutch.png',
+    // 复用现有兔子头像
+    'rabbit-angora': '/pets/avatars/rabbit-dwarf.png',
+    'rabbit-flemish-giant': '/pets/avatars/rabbit-dutch.png',
+    'rabbit-himalayan': '/pets/avatars/rabbit-dwarf.png',
+    'rabbit-lionhead': '/pets/avatars/rabbit-holland-lop.png',
+    'rabbit-lop-english': '/pets/avatars/rabbit-holland-lop.png',
+    'rabbit-mini-lop': '/pets/avatars/rabbit-holland-lop.png',
+    'rabbit-rex': '/pets/avatars/rabbit-dutch.png',
     // ===== 小宠 =====
     'small-hamster': '/pets/avatars/small-hamster.png',
     'small-hamster-syrian': '/pets/avatars/small-hamster-syrian.png',
@@ -6658,6 +6637,7 @@ const PET_AVATARS = {
     'small-chinchilla': '/pets/avatars/small-chinchilla.png',
     'small-squirrel': '/pets/avatars/small-squirrel.png',
     'small-african-hedgehog': '/pets/avatars/small-african-hedgehog.png',
+    'small-hedgehog': '/pets/avatars/small-african-hedgehog.png',
     'small-sugar-glider': '/pets/avatars/small-sugar-glider.png',
     'small-ferret': '/pets/avatars/small-ferret.png',
     // ===== 鸟类 =====
@@ -6701,7 +6681,8 @@ const PET_AVATARS = {
     // ===== 新增品种 =====
     'reptile-california-king-snake': '/pets/avatars/reptile-california-king-snake.png',
     'reptile-grass-lizard': '/pets/avatars/reptile-grass-lizard.png',
-    'reptile-african-fat-tail-gecko': '/pets/avatars/reptile-african-fat-tail-gecko.png'
+    'reptile-african-fat-tail-gecko': '/pets/avatars/reptile-african-fat-tail-gecko.png',
+    'reptile-turtle': '/pets/avatars/reptile-leopard-gecko.png'
 };
 const DEFAULT_AVATAR = '/pets/avatars/default-pet.png';
 function getPetAvatar(breedId) {

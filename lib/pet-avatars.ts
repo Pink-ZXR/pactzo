@@ -17,6 +17,9 @@
 export const PET_AVATARS: Record<string, string> = {
   // ===== 猫咪 =====
   // 已有头像 (28种)
+  'cat-british-shorthair': '/pets/avatars/cat-british-blue.png', // 复用蓝色英短
+  'cat-american-shorthair': '/pets/avatars/cat-american-tabby.png', // 复用美短虎斑
+  'cat-orange': '/pets/avatars/cat-chinese-orange.png', // 复用中华橘猫
   'cat-ragdoll': '/pets/avatars/cat-ragdoll.png',
   'cat-siamese': '/pets/avatars/cat-siamese.png',
   'cat-scottish-fold': '/pets/avatars/cat-scottish-fold.png',
@@ -115,6 +118,14 @@ export const PET_AVATARS: Record<string, string> = {
   'rabbit-holland-lop': '/pets/avatars/rabbit-holland-lop.png',
   'rabbit-dwarf': '/pets/avatars/rabbit-dwarf.png',
   'rabbit-dutch': '/pets/avatars/rabbit-dutch.png',
+  // 复用现有兔子头像
+  'rabbit-angora': '/pets/avatars/rabbit-dwarf.png', // 待补充
+  'rabbit-flemish-giant': '/pets/avatars/rabbit-dutch.png', // 待补充
+  'rabbit-himalayan': '/pets/avatars/rabbit-dwarf.png', // 待补充
+  'rabbit-lionhead': '/pets/avatars/rabbit-holland-lop.png', // 待补充
+  'rabbit-lop-english': '/pets/avatars/rabbit-holland-lop.png', // 待补充
+  'rabbit-mini-lop': '/pets/avatars/rabbit-holland-lop.png', // 待补充
+  'rabbit-rex': '/pets/avatars/rabbit-dutch.png', // 待补充
 
   // ===== 小宠 =====
   'small-hamster': '/pets/avatars/small-hamster.png',
@@ -132,6 +143,7 @@ export const PET_AVATARS: Record<string, string> = {
   'small-chinchilla': '/pets/avatars/small-chinchilla.png',
   'small-squirrel': '/pets/avatars/small-squirrel.png',
   'small-african-hedgehog': '/pets/avatars/small-african-hedgehog.png',
+  'small-hedgehog': '/pets/avatars/small-african-hedgehog.png', // 复用非洲迷你刺猬头像
   'small-sugar-glider': '/pets/avatars/small-sugar-glider.png',
   'small-ferret': '/pets/avatars/small-ferret.png',
 
@@ -181,6 +193,7 @@ export const PET_AVATARS: Record<string, string> = {
   'reptile-california-king-snake': '/pets/avatars/reptile-california-king-snake.png',
   'reptile-grass-lizard': '/pets/avatars/reptile-grass-lizard.png',
   'reptile-african-fat-tail-gecko': '/pets/avatars/reptile-african-fat-tail-gecko.png',
+  'reptile-turtle': '/pets/avatars/reptile-leopard-gecko.png', // 待补充乌龟头像，暂时复用守宫
 };
 
 /** 默认头像（宠物头像未配置时使用） */

@@ -2493,20 +2493,6 @@ export const PET_DATABASE: PetBreed[] = [
     ],
   },
   {
-    id: 'exotic-sugar-glider',
-    name: '蜜袋鼯', nameEn: 'Sugar Glider',
-    category: 'exotic', categoryName: '异宠', wuxing: 'wood',
-    schedule: 1, energy: 2, space: 2, stability: 3,
-    companion: 3, attachment: 3, responsibility: 2,
-    furType: 'short', colorTags: ['灰色', '白色'], size: 'tiny',
-    traits: ['粘人', '夜行', '会滑翔', '社群性'],
-    description: '蜜袋鼯可以从高处滑翔，极其粘人，认主后喜欢待在主人口袋里。',
-    emotionalTemplates: [
-      '蜜袋鼯会从高处滑翔到你身上，用最特别的方式告诉你：我信任你。',
-      '它小小的身体窝在你口袋里时，你会感到一种被依赖的幸福。',
-    ],
-  },
-  {
     id: 'exotic-fox',
     name: '宠物狐狸', nameEn: 'Domesticated Fox',
     category: 'exotic', categoryName: '异宠', wuxing: 'fire',
