@@ -1160,6 +1160,10 @@ img, video {
   gap: .25rem;
 }
 
+.gap-1\.5 {
+  gap: .375rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -2842,6 +2846,7 @@ img, video {
 
 html {
   scroll-behavior: smooth;
+  position: relative;
 }
 
 body {

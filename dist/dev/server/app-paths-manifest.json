@@ -1,4 +1,12 @@
 {
   "/(home)/page": "app/(home)/page.js",
-  "/questionnaire/birthday/page": "app/questionnaire/birthday/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/loading/page": "app/loading/page.js",
+  "/questionnaire/appearance/page": "app/questionnaire/appearance/page.js",
+  "/questionnaire/birthday/page": "app/questionnaire/birthday/page.js",
+  "/questionnaire/dili/page": "app/questionnaire/dili/page.js",
+  "/questionnaire/pet-category/page": "app/questionnaire/pet-category/page.js",
+  "/questionnaire/renhe/page": "app/questionnaire/renhe/page.js",
+  "/questionnaire/tianshi/page": "app/questionnaire/tianshi/page.js",
+  "/result/page": "app/result/page.js"
 }

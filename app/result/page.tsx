@@ -374,7 +374,7 @@ export default function ResultPage() {
         {/* Grain texture */}
         <div
           className="pointer-events-none absolute inset-0 z-50 opacity-[0.03] mix-blend-overlay"
-          style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }}
+          style={{ backgroundImage: `url('/noise.svg')` }}
         />
 
         {/* Main layout: Massive score top-left offset */}
@@ -1989,15 +1989,40 @@ export default function ResultPage() {
                       const tX = encodeURIComponent(shareTextX);
                       const tWeibo = encodeURIComponent(shareTextFull);
                       return (
-                        <div className="mt-4 flex gap-6" style={{ fontFamily: "'Space Mono', monospace", fontSize: '12px', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.8)' }}>
-                          <a href={`https://twitter.com/intent/tweet?text=${tX}&url=${u}`} target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors cursor-pointer">X</a>
-                          <a href={`https://service.weibo.com/share/share.php?title=${tWeibo}&url=${u}`} target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors cursor-pointer">Weibo</a>
+                        <div className="mt-4 flex gap-4 flex-wrap justify-center" style={{ fontFamily: "'Space Mono', monospace", fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.8)' }}>
+                          {/* X (Twitter) */}
+                          <a href={`https://twitter.com/intent/tweet?text=${tX}&url=${u}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            <span>X</span>
+                          </a>
+                          {/* 微博 */}
+                          <a href={`https://service.weibo.com/share/share.php?title=${tWeibo}&url=${u}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10.098 20c-4.612 0-9.098-2.07-9.098-5.97 0-2.06 1.178-4.44 3.206-6.7 2.696-3.01 5.836-4.63 7.012-3.61.547.47.584 1.3.16 2.36-.21.52-.07.63.34.39 1.54-.89 2.98-1.21 3.75-.72.79.5.84 1.61.16 3.04-.17.37-.05.49.32.38 1.75-.53 3.06-.27 3.48.7.44 1-.27 2.45-1.86 4.02-2.45 2.41-5.83 6.1-7.342 6.1zm-4.648-9.97c-2.038 1.19-3.12 2.81-2.418 3.62.702.81 2.818.44 4.728-.83 1.91-1.27 2.87-3.02 2.17-3.83-.71-.81-2.45-.15-4.48 1.04zm4.088 5.17c.93-.17 1.65-.66 1.6-1.1-.04-.44-.83-.68-1.76-.51-.93.17-1.65.66-1.6 1.1.05.44.83.68 1.76.51zM12.508 3c-.14-.12-.07-.35.15-.52 1.5-1.14 3.73-1.25 5.14-.25.14.1.18.28.09.41-.09.13-.28.17-.41.08-1.18-.83-3.12-.74-4.43.18-.13.0-.29.1-.54.1zm1.15 1.51c-.12-.1-.07-.3.12-.46 1.16-.98 2.76-1.13 3.58-.33.12.12.12.31 0 .43-.11.11-.3.11-.42 0-.59-.57-1.82-.48-2.74.3-.12.1-.38.16-.54.06zm6.53 6.93c-.53-.22-.76-.82-.51-1.33.24-.52.1-1.12-.33-1.35-.42-.24-.56-.77-.31-1.19.25-.43.78-.57 1.2-.32.43.25.98.09 1.24-.34.24-.42.77-.56 1.19-.31.42.24.55.77.3 1.19-.24.42-.09.97.35 1.22.42.24.56.77.31 1.19-.25.43-.78.57-1.2.32-.43-.25-.98-.09-1.24.34-.24.42-.77.56-1.19.31-.42-.25-.55-.78-.31-1.19.25-.43.1-.98-.35-1.24z"/></svg>
+                            <span>Weibo</span>
+                          </a>
+                          {/* 抖音 */}
+                          <a href={`https://www.douyin.com/`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                            <span>抖音</span>
+                          </a>
+                          {/* 小红书 */}
+                          <a href={`https://www.xiaohongshu.com/`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.88.03-.24.37-.49 1.02-.74 3.98-1.73 6.64-2.87 7.97-3.43 3.8-1.57 4.59-1.85 5.1-1.86.11 0 .37.03.53.14.14.1.18.23.2.33.02.09.04.3.02.46z"/></svg>
+                            <span>小红书</span>
+                          </a>
+                          {/* 微信 */}
                           <span
-                            className="hover:text-white/60 transition-colors cursor-pointer"
+                            className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer"
                             onClick={() => handleCopyText(shareTextFull, 1)}
                           >
-                            {copiedIndex === 1 ? 'Copied ✓' : 'Copy'}
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.32.32 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098c.996.27 2.058.392 3.154.392 4.8 0 8.691-3.288 8.691-7.342S13.491 2.188 8.691 2.188zM5.785 7.09a1.03 1.03 0 1 1 0 2.058 1.03 1.03 0 0 1 0-2.058zm5.812 0a1.03 1.03 0 1 1 0 2.058 1.03 1.03 0 0 1 0-2.058zm5.34 3.586c-4.7 0-8.511 3.214-8.511 7.18 0 1.69.71 3.24 1.9 4.45a.54.54 0 0 1 .14.58l-.31 1.16a.48.48 0 0 0 .72.5l1.57-.94a.71.71 0 0 1 .6-.08c.88.23 1.81.35 2.78.35 4.7 0 8.511-3.214 8.511-7.18s-3.811-7.02-8.4-7.02zm-2.66 3.79a.87.87 0 1 1 0 1.74.87.87 0 0 1 0-1.74zm5.32 0a.87.87 0 1 1 0 1.74.87.87 0 0 1 0-1.74z"/></svg>
+                            <span>{copiedIndex === 1 ? '已复制 ✓' : '微信'}</span>
                           </span>
+                          {/* Instagram */}
+                          <a href={`https://www.instagram.com/`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>Instagram</span>
+                          </a>
                         </div>
                       );
                     })()}

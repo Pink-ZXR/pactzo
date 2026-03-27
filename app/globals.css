@@ -77,6 +77,7 @@
 }
 
 html {
+  position: relative;
   scroll-behavior: smooth;
 }
 

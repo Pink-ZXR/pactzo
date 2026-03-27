@@ -36,7 +36,7 @@ export default function PetCategoryPage() {
     <div className="relative h-screen w-full bg-[#F6F5F2] text-[#1A1A1A] overflow-hidden selection:bg-[#7A2E2E]/10">
       <div
         className="pointer-events-none fixed inset-0 z-50 opacity-[0.04] mix-blend-overlay"
-        style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }}
+        style={{ backgroundImage: `url('/noise.svg')` }}
       />
 
       <nav className="fixed top-0 left-0 right-0 z-40 bg-[#F6F5F2]/80 backdrop-blur-md border-b border-black/5">
@@ -44,7 +44,7 @@ export default function PetCategoryPage() {
           <Link href="/" className="font-inter-label text-[9px] opacity-50 hover:opacity-100 hover:text-[#7A2E2E] transition-all duration-300">
             百澤
           </Link>
-          <span className="font-inter text-[10px] tracking-[0.3em] text-[#1A1A1A]/30 font-light">06 / 07</span>
+
         </div>
       </nav>
 
@@ -67,7 +67,7 @@ export default function PetCategoryPage() {
             <div className="h-[1px] w-16 bg-[#7A2E2E]" />
           </div>
         </div>
-        <div className="font-inter-label text-[10px] opacity-20">Step 06</div>
+
       </footer>
 
       <div className="h-full flex items-center justify-center px-[6%] md:px-[10%] lg:px-[14%]">

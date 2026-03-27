@@ -40,7 +40,7 @@ export default function CuratedFlow() {
       {/* 1. 噪点纹理层 (纸张质感) */}
       <div 
         className="pointer-events-none fixed inset-0 z-50 opacity-[0.04] mix-blend-overlay" 
-        style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }}
+        style={{ backgroundImage: `url('/noise.svg')` }}
       />
 
       {/* 2. 底部导航索引 (极简线) */}

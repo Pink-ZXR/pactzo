@@ -71,7 +71,7 @@ export default function TianshiPage() {
       {/* 噪点纹理 */}
       <div
         className="pointer-events-none fixed inset-0 z-50 opacity-[0.04] mix-blend-overlay"
-        style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }}
+        style={{ backgroundImage: `url('/noise.svg')` }}
       />
 
       {/* 顶部导航 */}
@@ -80,7 +80,7 @@ export default function TianshiPage() {
           <Link href="/" className="font-inter-label text-[9px] opacity-50 hover:opacity-100 hover:text-[#7A2E2E] transition-all duration-300">
             百澤
           </Link>
-          <span className="font-inter text-[10px] tracking-[0.3em] text-[#1A1A1A]/30 font-light">02 / 07</span>
+
         </div>
       </nav>
 
@@ -128,8 +128,8 @@ export default function TianshiPage() {
           >
             <div className="w-full grid grid-cols-1 md:grid-cols-[40%_60%] items-center gap-12 md:gap-8">
               {/* 左侧：标题 */}
-              <div className="relative overflow-hidden">
-                <AnimatePresence>
+              <div className="relative">
+                <AnimatePresence mode="wait">
                   {activeStep === index && (
                     <motion.div
                       key={`title-${s.id}`}

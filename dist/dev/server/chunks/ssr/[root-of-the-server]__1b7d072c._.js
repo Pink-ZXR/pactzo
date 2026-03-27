@@ -622,7 +622,660 @@ const PET_DATABASE = [
             '看着它努力够高处的样子，你会明白：努力本身就是最可爱的事。'
         ]
     },
-    // ===== 狗狗 (12种) =====
+    {
+        id: 'cat-chinese-sanhua',
+        name: '中华田园猫三花猫',
+        nameEn: 'Chinese Sanhua Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '橘色'
+        ],
+        size: 'medium',
+        traits: [
+            '独立',
+            '聪明',
+            '适应力强',
+            '温顺'
+        ],
+        description: '三花猫是中华田园猫中最受欢迎的花色之一，性格温顺独立，据说能带来好运。',
+        emotionalTemplates: [
+            '三花猫会用它的三色毛发和温柔眼神，为你带来好运和温暖。',
+            '它独立又不失依恋的性格，是最贴心的田园伙伴。'
+        ]
+    },
+    {
+        id: 'cat-chinese-cow',
+        name: '中华田园猫奶牛猫',
+        nameEn: 'Chinese Cow Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 3,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '活泼',
+            '搞怪',
+            '聪明',
+            '有个性'
+        ],
+        description: '奶牛猫因其黑白相间的毛色得名，性格活泼搞怪，是社交媒体上的表情包担当。',
+        emotionalTemplates: [
+            '奶牛猫会用它的搞怪行为和神经质性格，为你的生活带来无尽欢乐。',
+            '它黑白分明的外表下，藏着一颗古灵精怪的心。'
+        ]
+    },
+    {
+        id: 'cat-chinese-lihua',
+        name: '中华田园猫狸花猫',
+        nameEn: 'Chinese Lihua Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '黑色',
+            '斑纹'
+        ],
+        size: 'medium',
+        traits: [
+            '聪明',
+            '忠诚',
+            '适应力强',
+            '健康'
+        ],
+        description: '狸花猫是中国本土自然品种，拥有漂亮的虎斑纹，性格聪明忠诚，身体健壮。',
+        emotionalTemplates: [
+            '狸花猫会用它的聪明和忠诚，成为你最好的田园守护者。',
+            '它漂亮的虎斑纹和深情的眼神，是千年自然选择的杰作。'
+        ]
+    },
+    {
+        id: 'cat-chinese-orange',
+        name: '中华田园猫橘猫',
+        nameEn: 'Chinese Orange Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '橘黄',
+            '斑纹'
+        ],
+        size: 'medium',
+        traits: [
+            '开朗',
+            '亲人',
+            '贪吃',
+            '好养'
+        ],
+        description: '橘猫是中华田园猫中最受欢迎的花色，性格亲人开朗，十个橘猫九个胖。',
+        emotionalTemplates: [
+            '橘猫会用它的开朗性格和圆润身材，为你的生活带来阳光和欢笑。',
+            '它亲人的性格和可爱的模样，是最接地气的温暖。'
+        ]
+    },
+    {
+        id: 'cat-british-silver',
+        name: '英国短毛猫银渐层',
+        nameEn: 'British Shorthair Silver',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '银色',
+            '白色'
+        ],
+        size: 'medium',
+        traits: [
+            '优雅',
+            '安静',
+            '高贵',
+            '独立'
+        ],
+        description: '银渐层英短有着独特的银色渐变被毛，如同月光般优雅高贵，性格安静独立。',
+        emotionalTemplates: [
+            '银渐层会用它的月光般毛色和优雅气质，为你的生活增添一份高贵。',
+            '它安静陪伴的身影，就像月光一样温柔而不打扰。'
+        ]
+    },
+    {
+        id: 'cat-british-blue',
+        name: '英国短毛猫蓝猫',
+        nameEn: 'British Shorthair Blue',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '蓝色',
+            '灰色'
+        ],
+        size: 'medium',
+        traits: [
+            '沉稳',
+            '安静',
+            '温和',
+            '独立'
+        ],
+        description: '蓝猫是英短最经典的毛色，深蓝灰色的被毛如同深海，性格沉稳温和。',
+        emotionalTemplates: [
+            '蓝猫会用它的深海般毛色和沉稳性格，给你最踏实的陪伴。',
+            '它安静的存在就像深海，包容而宁静。'
+        ]
+    },
+    {
+        id: 'cat-british-blue-white',
+        name: '英国短毛猫蓝白',
+        nameEn: 'British Shorthair Blue White',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '蓝色',
+            '白色'
+        ],
+        size: 'medium',
+        traits: [
+            '可爱',
+            '温和',
+            '甜美',
+            '亲人'
+        ],
+        description: '蓝白英短有着蓝白相间的可爱外表，正八脸和粉鼻子是标准配置，性格甜美亲人。',
+        emotionalTemplates: [
+            '蓝白英短会用它的甜美外表和温柔性格，融化你所有的防备。',
+            '它正八的脸和粉粉的鼻子，是可爱最完美的诠释。'
+        ]
+    },
+    {
+        id: 'cat-british-golden',
+        name: '英国短毛猫金渐层',
+        nameEn: 'British Shorthair Golden',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '金色',
+            '棕色'
+        ],
+        size: 'medium',
+        traits: [
+            '温暖',
+            '安静',
+            '高贵',
+            '亲人'
+        ],
+        description: '金渐层英短有着太阳般的金色渐变被毛，温暖高贵，是近年来最受欢迎的英短花色。',
+        emotionalTemplates: [
+            '金渐层会用它的阳光般毛色和温暖性格，照亮你生活的每一个角落。',
+            '它金色的毛发就像小太阳，把温暖带给你。'
+        ]
+    },
+    {
+        id: 'cat-norwegian',
+        name: '挪威森林猫',
+        nameEn: 'Norwegian Forest Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '独立',
+            '聪明',
+            '适应力强',
+            '野性美'
+        ],
+        description: '挪威森林猫是北欧的古老品种，拥有华丽的被毛和野性的气质，是维京人的伙伴。',
+        emotionalTemplates: [
+            '挪威森林猫会用它的野性美和独立性格，带你感受北欧的神秘。',
+            '它华丽的被毛和深邃的眼神，是维京时代流传下来的传奇。'
+        ]
+    },
+    {
+        id: 'cat-napoleon',
+        name: '拿破仑矮脚猫',
+        nameEn: 'Napoleon Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '多彩',
+            '白色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '可爱',
+            '粘人',
+            '温顺',
+            '独特'
+        ],
+        description: '拿破仑矮脚猫结合了曼基康的短腿和波斯的长毛，性格温顺粘人，是行走的毛球。',
+        emotionalTemplates: [
+            '拿破仑会用它的短腿和长毛，成为你生活中最可爱的毛球。',
+            '它粘人的性格和独特的外表，是让人无法抗拒的萌物。'
+        ]
+    },
+    {
+        id: 'cat-bengal',
+        name: '孟加拉豹猫',
+        nameEn: 'Bengal Cat',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '金色',
+            '黑色',
+            '斑纹'
+        ],
+        size: 'medium',
+        traits: [
+            '活泼',
+            '聪明',
+            '野性美',
+            '爱玩水'
+        ],
+        description: '孟加拉豹猫拥有豹子般的华丽斑纹，性格活泼聪明，是唯一喜欢玩水的家猫品种。',
+        emotionalTemplates: [
+            '孟加拉豹猫会用它的野性美和活力，为你的生活带来冒险的气息。',
+            '它豹子般的外表和猫咪的心，是野性与温柔的完美结合。'
+        ]
+    },
+    {
+        id: 'cat-american-curl',
+        name: '美国卷耳猫',
+        nameEn: 'American Curl',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '多彩',
+            '白色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '独特',
+            '活泼',
+            '亲人',
+            '聪明'
+        ],
+        description: '美国卷耳猫有着向后卷曲的独特耳朵，性格活泼亲人，是耳朵会微笑的猫咪。',
+        emotionalTemplates: [
+            '美国卷耳猫会用它的卷卷耳朵和活泼性格，为你的生活带来独特的欢乐。',
+            '它向后卷曲的耳朵，像是在时刻倾听你的心声。'
+        ]
+    },
+    {
+        id: 'cat-american-cheese',
+        name: '美国短毛猫起司猫',
+        nameEn: 'American Shorthair Cheese',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '银色',
+            '白色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '可爱',
+            '健康',
+            '好养',
+            '温顺'
+        ],
+        description: '起司猫是美短银虎斑加白的经典花色，因像起司蛋糕般可爱得名，性格温顺好养。',
+        emotionalTemplates: [
+            '起司猫会用它的可爱外表和温顺性格，成为你生活中最甜美的存在。',
+            '它像起司蛋糕一样的配色，让每一天都充满甜蜜。'
+        ]
+    },
+    {
+        id: 'cat-american-tabby',
+        name: '美国短毛猫虎斑纹',
+        nameEn: 'American Shorthair Tabby',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '银色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '经典',
+            '健康',
+            '活泼',
+            '亲人'
+        ],
+        description: '虎斑纹是美短最经典的毛色，清晰的虎斑纹和健壮的体格，是美短的标准形象。',
+        emotionalTemplates: [
+            '虎斑美短会用它的经典外表和活泼性格，为你带来最纯正的美式陪伴。',
+            '它清晰的纹路和健壮的身体，是力量与美的结合。'
+        ]
+    },
+    {
+        id: 'cat-exotic',
+        name: '加菲猫（异国短毛猫）',
+        nameEn: 'Exotic Shorthair',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '多彩',
+            '白色',
+            '棕色'
+        ],
+        size: 'medium',
+        traits: [
+            '憨厚',
+            '安静',
+            '可爱',
+            '温顺'
+        ],
+        description: '异国短毛猫是短毛版的波斯猫，有着标志性的扁脸和憨厚的表情，性格安静温顺。',
+        emotionalTemplates: [
+            '加菲猫会用它的憨厚表情和安静性格，给你最踏实的陪伴。',
+            '它扁扁的脸和圆圆的眼睛，是可爱最完美的定义。'
+        ]
+    },
+    {
+        id: 'cat-oriental',
+        name: '东方短毛猫',
+        nameEn: 'Oriental Shorthair',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '多彩',
+            '白色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '活泼',
+            '话痨',
+            '粘人',
+            '聪明'
+        ],
+        description: '东方短毛猫是暹罗的近亲，拥有修长的身材和大大的耳朵，性格活泼粘人，是话痨。',
+        emotionalTemplates: [
+            '东方短毛猫会用它的活泼和粘人，让你的生活永远充满声音和欢乐。',
+            '它修长的身材和大大的耳朵，是优雅与灵动的化身。'
+        ]
+    },
+    {
+        id: 'cat-devon',
+        name: '德文卷毛猫',
+        nameEn: 'Devon Rex',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 3,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '活泼',
+            '聪明',
+            '独特',
+            '粘人'
+        ],
+        description: '德文卷毛猫有着独特的卷毛和大大的耳朵，性格极其活泼聪明，像小精灵一样。',
+        emotionalTemplates: [
+            '德文卷毛猫会用它的独特外表和活泼性格，为你的生活带来精灵般的欢乐。',
+            '它卷卷的毛发和精灵般的眼神，是来自童话世界的小精灵。'
+        ]
+    },
+    {
+        id: 'cat-birman',
+        name: '伯曼猫',
+        nameEn: 'Birman',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '温柔',
+            '优雅',
+            '粘人',
+            '神秘'
+        ],
+        description: '伯曼猫是缅甸的神圣之猫，拥有蓝色的眼睛和白色的手套，性格温柔优雅。',
+        emotionalTemplates: [
+            '伯曼猫会用它的神圣气质和温柔性格，为你的生活带来神秘的祝福。',
+            '它蓝色的眼睛和白色的手套，是缅甸寺庙流传下来的神圣。'
+        ]
+    },
+    {
+        id: 'cat-persian-chinchilla',
+        name: '波斯猫金吉拉',
+        nameEn: 'Persian Chinchilla',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '银色',
+            '白色'
+        ],
+        size: 'medium',
+        traits: [
+            '高贵',
+            '优雅',
+            '安静',
+            '华丽'
+        ],
+        description: '金吉拉是波斯猫中最华丽的毛色，有着银色的被毛和绿色的眼睛，如同行走的珠宝。',
+        emotionalTemplates: [
+            '金吉拉会用它的华丽外表和高贵气质，为你的生活增添一份珠宝般的光彩。',
+            '它银色的被毛和绿色的眼睛，是大自然最精致的创作。'
+        ]
+    },
+    {
+        id: 'cat-abyssinian',
+        name: '阿比西尼亚猫',
+        nameEn: 'Abyssinian',
+        category: 'cat',
+        categoryName: '猫咪',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '红色',
+            '金色'
+        ],
+        size: 'medium',
+        traits: [
+            '活泼',
+            '聪明',
+            '古老',
+            '优雅'
+        ],
+        description: '阿比西尼亚猫是最古老的猫种之一，拥有独特的刺鼠纹，性格活泼聪明，像小狮子。',
+        emotionalTemplates: [
+            '阿比西尼亚猫会用它的古老血统和活泼性格，带你穿越千年的时光。',
+            '它独特的刺鼠纹和优雅的身姿，是古埃及流传下来的神秘。'
+        ]
+    },
+    // ===== 狗狗 (58种) =====
     {
         id: 'dog-golden-retriever',
         name: '金毛寻回犬',
@@ -1114,7 +1767,1460 @@ const PET_DATABASE = [
             '它温顺的性格会让你感受到被无条件爱着的幸福。'
         ]
     },
-    // ===== 兔子 (5种) =====
+    {
+        id: 'dog-teddy',
+        name: '泰迪',
+        nameEn: 'Teddy Poodle',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色',
+            '灰色'
+        ],
+        size: 'small',
+        traits: [
+            '聪明',
+            '活泼',
+            '不掉毛',
+            '粘人'
+        ],
+        description: '泰迪是贵宾犬的一种造型，聪明活泼，不掉毛，是最受欢迎的城市伴侣犬。',
+        emotionalTemplates: [
+            '泰迪会用它的聪明才智和可爱外表，成为你生活中最甜蜜的存在。',
+            '它卷卷的毛发和灵动的眼神，会让每一天都充满欢乐。'
+        ]
+    },
+    {
+        id: 'dog-schnauzer',
+        name: '雪纳瑞',
+        nameEn: 'Schnauzer',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '黑色',
+            '银色',
+            '白色'
+        ],
+        size: 'small',
+        traits: [
+            '勇敢',
+            '聪明',
+            '忠诚',
+            '有个性'
+        ],
+        description: '雪纳瑞有着标志性的小老头外表，性格勇敢忠诚，是非常有个性的伴侣犬。',
+        emotionalTemplates: [
+            '雪纳瑞会用它的勇敢和忠诚，成为你生活中最可靠的小卫士。',
+            '它独特的外表下，藏着一颗温柔又坚定的心。'
+        ]
+    },
+    {
+        id: 'dog-yorkshire',
+        name: '约克夏梗',
+        nameEn: 'Yorkshire Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '金色',
+            '黑色',
+            '钢蓝色'
+        ],
+        size: 'tiny',
+        traits: [
+            '勇敢',
+            '活泼',
+            '粘人',
+            '优雅'
+        ],
+        description: '约克夏梗体型娇小但性格勇敢，丝滑的长毛如瀑布般美丽，是优雅的掌上明珠。',
+        emotionalTemplates: [
+            '约克夏会用它的勇敢和粘人，证明小小的身体也能装下大大的爱。',
+            '它丝滑的毛发和灵动的眼神，会让你爱不释手。'
+        ]
+    },
+    {
+        id: 'dog-westie',
+        name: '西高地白梗',
+        nameEn: 'West Highland White Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '白色'
+        ],
+        size: 'small',
+        traits: [
+            '活泼',
+            '勇敢',
+            '独立',
+            '可爱'
+        ],
+        description: '西高地白梗通体雪白，性格活泼勇敢，是最受欢迎的白色小型犬之一。',
+        emotionalTemplates: [
+            '西高地会用它的雪白毛发和活泼性格，为你的生活带来纯净的快乐。',
+            '它勇敢的小身体里，藏着对世界无限的好奇。'
+        ]
+    },
+    {
+        id: 'dog-maltese',
+        name: '马尔济斯',
+        nameEn: 'Maltese',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '白色'
+        ],
+        size: 'tiny',
+        traits: [
+            '温柔',
+            '优雅',
+            '粘人',
+            '高贵'
+        ],
+        description: '马尔济斯有着雪白丝滑的长毛和温柔的性格，是古贵族钟爱的伴侣犬。',
+        emotionalTemplates: [
+            '马尔济斯会用它的优雅和温柔，让你感受贵族般的陪伴。',
+            '它雪白的长毛和依恋的眼神，就是纯粹爱的化身。'
+        ]
+    },
+    {
+        id: 'dog-pug',
+        name: '巴哥犬',
+        nameEn: 'Pug',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '米色',
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '憨厚',
+            '安静',
+            '粘人',
+            '搞笑'
+        ],
+        description: '巴哥犬有着扁平的脸和忧郁的大眼睛，性格憨厚搞笑，是快乐的源泉。',
+        emotionalTemplates: [
+            '巴哥会用它的憨厚表情和搞笑行为，治愈你所有的烦恼。',
+            '它忧郁的大眼睛里，其实藏着一颗快乐的心。'
+        ]
+    },
+    {
+        id: 'dog-akita',
+        name: '秋田犬',
+        nameEn: 'Akita',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '金色',
+            '白色',
+            '棕色'
+        ],
+        size: 'large',
+        traits: [
+            '忠诚',
+            '勇敢',
+            '独立',
+            '稳重'
+        ],
+        description: '秋田犬是日本国犬，以忠诚闻名，性格稳重独立，是优秀的守护犬。',
+        emotionalTemplates: [
+            '秋田犬会用它的忠诚和稳重，成为你生命中最坚定的守护者。',
+            '它深情的目光和沉默的陪伴，胜过千言万语。'
+        ]
+    },
+    {
+        id: 'dog-alaskan-malamute',
+        name: '阿拉斯加雪橇犬',
+        nameEn: 'Alaskan Malamute',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '灰色',
+            '白色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '强壮',
+            '友善',
+            '独立',
+            '精力旺'
+        ],
+        description: '阿拉斯加雪橇犬体型巨大，性格友善温和，是力量与温柔的完美结合。',
+        emotionalTemplates: [
+            '阿拉斯加会用它的强壮和温柔，给你最踏实的安全感。',
+            '它厚厚的毛发和温暖的拥抱，是冬天最好的礼物。'
+        ]
+    },
+    {
+        id: 'dog-shetland-sheepdog',
+        name: '喜乐蒂牧羊犬',
+        nameEn: 'Shetland Sheepdog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 3,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '金色',
+            '白色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '聪明',
+            '温顺',
+            '忠诚',
+            '优雅'
+        ],
+        description: '喜乐蒂牧羊犬有着华丽的被毛和聪明的大脑，是小型边牧的完美替代。',
+        emotionalTemplates: [
+            '喜乐蒂会用它的聪明和忠诚，成为你最好的倾听者和伙伴。',
+            '它优雅的身姿和温柔的眼神，会让你的心变得柔软。'
+        ]
+    },
+    {
+        id: 'dog-bedlington',
+        name: '贝灵顿梗',
+        nameEn: 'Bedlington Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '蓝色',
+            '米色',
+            '棕色'
+        ],
+        size: 'medium',
+        traits: [
+            '独特',
+            '优雅',
+            '敏捷',
+            '温和'
+        ],
+        description: '贝灵顿梗有着绵羊般独特的外表，性格温和优雅，是最具辨识度的犬种。',
+        emotionalTemplates: [
+            '贝灵顿会用它的独特外表和温和性格，成为你生活中最特别的存在。',
+            '它绵羊般的外表下，藏着一颗温柔又敏捷的心。'
+        ]
+    },
+    {
+        id: 'dog-cavalier',
+        name: '查理王小猎犬',
+        nameEn: 'Cavalier King Charles Spaniel',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '温柔',
+            '优雅',
+            '粘人',
+            '甜美'
+        ],
+        description: '查理王小猎犬是英国皇室的爱犬，性格温柔甜美，有着天使般的外表。',
+        emotionalTemplates: [
+            '查理王会用它的温柔和甜美，让你感受皇室般的宠爱。',
+            '它天使般的眼睛和依恋的性格，会让你深深爱上它。'
+        ]
+    },
+    {
+        id: 'dog-doberman',
+        name: '杜宾犬',
+        nameEn: 'Doberman',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'short',
+        colorTags: [
+            '黑色',
+            '棕色'
+        ],
+        size: 'large',
+        traits: [
+            '勇敢',
+            '忠诚',
+            '聪明',
+            '威严'
+        ],
+        description: '杜宾犬体型健美，性格勇敢忠诚，是最优秀的护卫犬之一。',
+        emotionalTemplates: [
+            '杜宾犬会用它的勇敢和忠诚，成为你生命中最可靠的守护者。',
+            '它威严的外表下，藏着对主人最深沉的爱。'
+        ]
+    },
+    {
+        id: 'dog-rottweiler',
+        name: '罗威纳犬',
+        nameEn: 'Rottweiler',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'short',
+        colorTags: [
+            '黑色',
+            '棕色'
+        ],
+        size: 'large',
+        traits: [
+            '强壮',
+            '忠诚',
+            '勇敢',
+            '稳重'
+        ],
+        description: '罗威纳犬强壮有力，性格忠诚稳重，经过训练后是最可靠的守护伙伴。',
+        emotionalTemplates: [
+            '罗威纳会用它的强壮和忠诚，给你最坚实的安全感。',
+            '它稳重的性格和深沉的爱，会让你明白什么是真正的守护。'
+        ]
+    },
+    {
+        id: 'dog-shih-tzu',
+        name: '西施犬',
+        nameEn: 'Shih Tzu',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '白色',
+            '金色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '温柔',
+            '优雅',
+            '粘人',
+            '高贵'
+        ],
+        description: '西施犬是中国古老的宫廷犬，性格温柔高贵，长毛飘逸如仙女。',
+        emotionalTemplates: [
+            '西施犬会用它的温柔和高贵，让你感受东方美学的韵味。',
+            '它飘逸的长毛和依恋的眼神，是千年传承的优雅。'
+        ]
+    },
+    {
+        id: 'dog-chinese-rural',
+        name: '中华田园犬',
+        nameEn: 'Chinese Rural Dog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 3,
+        companion: 2,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '黄色',
+            '黑色',
+            '白色',
+            '花色'
+        ],
+        size: 'medium',
+        traits: [
+            '忠诚',
+            '聪明',
+            '适应力强',
+            '健康'
+        ],
+        description: '中华田园犬是中国本土犬种，聪明忠诚，适应力强，是最好的家庭守护者。',
+        emotionalTemplates: [
+            '中华田园犬会用它的忠诚和聪明，成为你最好的家人。',
+            '它朴实的外表下，藏着最纯粹的爱和最深的依恋。'
+        ]
+    },
+    {
+        id: 'dog-dachshund-long',
+        name: '长毛腊肠',
+        nameEn: 'Long-haired Dachshund',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '棕色',
+            '黑色',
+            '奶油色'
+        ],
+        size: 'small',
+        traits: [
+            '勇敢',
+            '活泼',
+            '忠诚',
+            '优雅'
+        ],
+        description: '长毛腊肠有着飘逸的长发和独特的长身体，性格勇敢活泼，是优雅的猎犬。',
+        emotionalTemplates: [
+            '长毛腊肠会用它的勇敢和优雅，成为你生活中最特别的小猎手。',
+            '它飘逸的长发和摇摆的短腿，是独特的可爱。'
+        ]
+    },
+    {
+        id: 'dog-maltipoo',
+        name: '马尔泰',
+        nameEn: 'Maltipoo',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '白色',
+            '米色',
+            '棕色'
+        ],
+        size: 'tiny',
+        traits: [
+            '可爱',
+            '聪明',
+            '不掉毛',
+            '粘人'
+        ],
+        description: '马尔泰是马尔济斯和贵宾的混血，继承了双方的优点，是最受欢迎的混血小型犬。',
+        emotionalTemplates: [
+            '马尔泰会用它的可爱和聪明，成为你生活中最甜蜜的小天使。',
+            '它继承了最好的基因，只为给你最纯粹的爱。'
+        ]
+    },
+    {
+        id: 'dog-cockapoo',
+        name: '可卡布',
+        nameEn: 'Cockapoo',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '金色',
+            '棕色',
+            '白色'
+        ],
+        size: 'small',
+        traits: [
+            '友善',
+            '聪明',
+            '不掉毛',
+            '活泼'
+        ],
+        description: '可卡布是可卡犬和贵宾的混血，性格友善活泼，是最受欢迎的家庭混血犬。',
+        emotionalTemplates: [
+            '可卡布会用它的友善和活泼，为你的家庭带来无限欢乐。',
+            '它聪明的头脑和温柔的心，是完美的家庭伴侣。'
+        ]
+    },
+    {
+        id: 'dog-wire-fox-terrier',
+        name: '刚毛猎狐梗',
+        nameEn: 'Wire Fox Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '勇敢',
+            '活泼',
+            '聪明',
+            '有个性'
+        ],
+        description: '刚毛猎狐梗有着独特的刚毛和勇敢的性格，是最经典的梗类犬之一。',
+        emotionalTemplates: [
+            '刚毛猎狐梗会用它的勇敢和聪明，成为你生活中最有个性的小伙伴。',
+            '它独特的外表和活泼的性格，会让你爱不释手。'
+        ]
+    },
+    {
+        id: 'dog-dachshund-short',
+        name: '短毛腊肠',
+        nameEn: 'Smooth-haired Dachshund',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '黑色',
+            '奶油色'
+        ],
+        size: 'small',
+        traits: [
+            '勇敢',
+            '活泼',
+            '忠诚',
+            '机警'
+        ],
+        description: '短毛腊肠是最经典的腊肠犬类型，短毛贴身，性格勇敢活泼，是优秀的猎犬。',
+        emotionalTemplates: [
+            '短毛腊肠会用它的勇敢和机警，成为你最好的小卫士。',
+            '它光滑的毛发和忠诚的心，是简单纯粹的爱。'
+        ]
+    },
+    {
+        id: 'dog-bulldog',
+        name: '斗牛犬（英斗）',
+        nameEn: 'Bulldog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '棕色',
+            '斑纹'
+        ],
+        size: 'medium',
+        traits: [
+            '憨厚',
+            '勇敢',
+            '安静',
+            '忠诚'
+        ],
+        description: '英国斗牛犬有着标志性的皱褶脸和强壮的身体，性格憨厚勇敢，是温柔的巨人。',
+        emotionalTemplates: [
+            '英斗会用它的憨厚和勇敢，给你最踏实的陪伴。',
+            '它皱褶的脸和温柔的心，是反差萌的最佳代表。'
+        ]
+    },
+    {
+        id: 'dog-australian-shepherd',
+        name: '澳大利亚牧羊犬',
+        nameEn: 'Australian Shepherd',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '黑色',
+            '白色',
+            '棕色',
+            '陨石色'
+        ],
+        size: 'large',
+        traits: [
+            '聪明',
+            '精力旺',
+            '忠诚',
+            '敏捷'
+        ],
+        description: '澳大利亚牧羊犬是极其聪明的工作犬，精力充沛，需要大量运动和智力挑战。',
+        emotionalTemplates: [
+            '澳牧会用它的聪明和忠诚，成为你最好的运动伙伴。',
+            '它敏捷的身姿和专注的眼神，是活力与智慧的结合。'
+        ]
+    },
+    {
+        id: 'dog-whippet',
+        name: '惠比特犬',
+        nameEn: 'Whippet',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色',
+            '灰色'
+        ],
+        size: 'medium',
+        traits: [
+            '优雅',
+            '敏捷',
+            '安静',
+            '温顺'
+        ],
+        description: '惠比特犬是小型灵缇，身材优雅，奔跑迅速，性格安静温顺，是完美的公寓犬。',
+        emotionalTemplates: [
+            '惠比特会用它的优雅和安静，为你的生活带来宁静的美。',
+            '它奔跑时的身姿如诗如画，静止时又是温柔的陪伴。'
+        ]
+    },
+    {
+        id: 'dog-greyhound',
+        name: '灵缇犬',
+        nameEn: 'Greyhound',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色',
+            '灰色'
+        ],
+        size: 'large',
+        traits: [
+            '优雅',
+            '速度',
+            '安静',
+            '温柔'
+        ],
+        description: '灵缇犬是世界上跑得最快的犬种，但性格却异常安静温柔，是沙发土豆的好选择。',
+        emotionalTemplates: [
+            '灵缇会用它的温柔和安静，颠覆你对速度型犬种的印象。',
+            '它优雅的身姿和慵懒的性格，是动静皆宜的完美伴侣。'
+        ]
+    },
+    {
+        id: 'dog-chihuahua',
+        name: '吉娃娃',
+        nameEn: 'Chihuahua',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色',
+            '金色'
+        ],
+        size: 'tiny',
+        traits: [
+            '勇敢',
+            '活泼',
+            '粘人',
+            '机警'
+        ],
+        description: '吉娃娃是世界上最小的犬种，但性格勇敢机警，对主人极其忠诚和依恋。',
+        emotionalTemplates: [
+            '吉娃娃会用它的勇敢和粘人，证明爱不分大小。',
+            '它小小的身体里，装着一颗只属于你的大大的心。'
+        ]
+    },
+    {
+        id: 'dog-scottish-terrier',
+        name: '苏格兰梗犬',
+        nameEn: 'Scottish Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'wool',
+        colorTags: [
+            '黑色',
+            '麦色'
+        ],
+        size: 'small',
+        traits: [
+            '勇敢',
+            '独立',
+            '有个性',
+            '忠诚'
+        ],
+        description: '苏格兰梗有着标志性的胡须和眉毛，性格勇敢独立，是最有个性的梗犬之一。',
+        emotionalTemplates: [
+            '苏格兰梗会用它的勇敢和独立，成为你生活中最有性格的小伙伴。',
+            '它独特的胡须和坚定的眼神，是独一无二的魅力。'
+        ]
+    },
+    {
+        id: 'dog-jack-russell',
+        name: '杰克罗素梗',
+        nameEn: 'Jack Russell Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '精力旺',
+            '聪明',
+            '勇敢',
+            '活泼'
+        ],
+        description: '杰克罗素梗精力极其旺盛，聪明勇敢，是永远长不大的快乐小精灵。',
+        emotionalTemplates: [
+            '杰克罗素会用它的精力和活泼，让你的生活充满欢笑和活力。',
+            '它永远长不大的性格和勇敢的心，是快乐的源泉。'
+        ]
+    },
+    {
+        id: 'dog-english-springer',
+        name: '史宾格',
+        nameEn: 'English Springer Spaniel',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '友善',
+            '活泼',
+            '聪明',
+            '优雅'
+        ],
+        description: '史宾格是英国传统的猎犬，性格友善活泼，有着优雅的外表和充沛的精力。',
+        emotionalTemplates: [
+            '史宾格会用它的友善和优雅，为你的家庭带来欢乐和温馨。',
+            '它活泼的性格和温柔的心，是完美的家庭伴侣。'
+        ]
+    },
+    {
+        id: 'dog-chinese-pastoral',
+        name: '土松',
+        nameEn: 'Chinese Pastoral Dog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 3,
+        companion: 2,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'long',
+        colorTags: [
+            '黄色',
+            '白色',
+            '黑色',
+            '花色'
+        ],
+        size: 'medium',
+        traits: [
+            '忠诚',
+            '聪明',
+            '适应力强',
+            '健康'
+        ],
+        description: '土松是中国本土松狮类型的犬种，毛发蓬松，性格忠诚稳重，是优秀的家庭犬。',
+        emotionalTemplates: [
+            '土松会用它的忠诚和稳重，成为你最好的家人和守护者。',
+            '它蓬松的毛发和深情的眼神，是最朴实的温暖。'
+        ]
+    },
+    {
+        id: 'dog-miniature-pinscher',
+        name: '小鹿犬',
+        nameEn: 'Miniature Pinscher',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '黑色',
+            '棕色',
+            '红色'
+        ],
+        size: 'tiny',
+        traits: [
+            '勇敢',
+            '活泼',
+            '机警',
+            '自信'
+        ],
+        description: '小鹿犬体型娇小但性格大胆自信，外形优雅如小鹿，是最有气场的小型犬。',
+        emotionalTemplates: [
+            '小鹿犬会用它的勇敢和自信，证明小个子也有大魅力。',
+            '它优雅的身姿和坚定的步伐，是小型犬中的王者。'
+        ]
+    },
+    {
+        id: 'dog-dalmatian',
+        name: '斑点狗',
+        nameEn: 'Dalmatian',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '优雅',
+            '精力旺',
+            '聪明',
+            '独特'
+        ],
+        description: '斑点狗以其独特的黑白斑点闻名，性格活泼聪明，是优雅与活力的结合。',
+        emotionalTemplates: [
+            '斑点狗会用它的独特和优雅，成为你生活中最亮眼的存在。',
+            '它黑白相间的斑点，是大自然最艺术的创作。'
+        ]
+    },
+    {
+        id: 'dog-border-collie-merle',
+        name: '陨石边牧',
+        nameEn: 'Merle Border Collie',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 3,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '陨石色',
+            '白色',
+            '灰色'
+        ],
+        size: 'large',
+        traits: [
+            '最聪明',
+            '精力旺',
+            '独特',
+            '敏捷'
+        ],
+        description: '陨石边牧拥有独特的陨石色花纹，智商极高，是最具观赏性的工作犬之一。',
+        emotionalTemplates: [
+            '陨石边牧会用它的智慧和独特，成为你生命中最特别的灵魂伙伴。',
+            '它陨石色的毛发如星空般美丽，眼神中藏着无限的智慧。'
+        ]
+    },
+    {
+        id: 'dog-newfoundland',
+        name: '纽芬兰犬',
+        nameEn: 'Newfoundland',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 3,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '黑色',
+            '棕色',
+            '白色'
+        ],
+        size: 'large',
+        traits: [
+            '温柔巨人',
+            '勇敢',
+            '聪明',
+            '水性佳'
+        ],
+        description: '纽芬兰犬是巨大的工作犬，性格温柔如保姆，擅长游泳，是优秀的家庭伴侣。',
+        emotionalTemplates: [
+            '纽芬兰会用它的温柔和勇敢，给你最安心的守护。',
+            '它巨大的身躯里，藏着一颗最温柔的保姆心。'
+        ]
+    },
+    {
+        id: 'dog-pharaoh-hound',
+        name: '法老王猎犬',
+        nameEn: 'Pharaoh Hound',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '红色'
+        ],
+        size: 'large',
+        traits: [
+            '优雅',
+            '古老',
+            '敏捷',
+            '高贵'
+        ],
+        description: '法老王猎犬是最古老的犬种之一，外形优雅高贵，奔跑时如艺术品般美丽。',
+        emotionalTemplates: [
+            '法老王猎犬会用它的优雅和古老，带你穿越千年的时光。',
+            '它高贵的气质和敏捷的身姿，是活着的历史。'
+        ]
+    },
+    {
+        id: 'dog-beagle-cn',
+        name: '米格鲁犬',
+        nameEn: 'Beagle (CN)',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '三色',
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '友善',
+            '活泼',
+            '好奇',
+            '温顺'
+        ],
+        description: '米格鲁犬即比格犬，性格友善活泼，嗅觉灵敏，是最受欢迎的家庭伴侣犬之一。',
+        emotionalTemplates: [
+            '米格鲁会用它的友善和活泼，治愈你所有的疲惫。',
+            '它好奇的眼神和快乐的性格，会让你的生活充满阳光。'
+        ]
+    },
+    {
+        id: 'dog-german-shorthaired',
+        name: '德国短毛指示犬',
+        nameEn: 'German Shorthaired Pointer',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '全能猎犬',
+            '聪明',
+            '精力旺',
+            '忠诚'
+        ],
+        description: '德国短毛指示犬是全能型猎犬，聪明忠诚，精力充沛，需要大量运动。',
+        emotionalTemplates: [
+            '德国短毛指示犬会用它的全能和忠诚，成为你最好的户外伙伴。',
+            '它聪明的头脑和无穷的精力，是运动爱好者的完美伴侣。'
+        ]
+    },
+    {
+        id: 'dog-pitbull',
+        name: '比特犬',
+        nameEn: 'Pit Bull',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色',
+            '花色'
+        ],
+        size: 'medium',
+        traits: [
+            '强壮',
+            '忠诚',
+            '勇敢',
+            '亲人'
+        ],
+        description: '比特犬肌肉发达，性格对主人极其忠诚亲人，经过正确训练后是优秀的家庭犬。',
+        emotionalTemplates: [
+            '比特犬会用它的忠诚和勇敢，给你最坚定的守护。',
+            '它强壮的外表下，藏着对家人最温柔的爱。'
+        ]
+    },
+    {
+        id: 'dog-bull-terrier',
+        name: '牛头梗',
+        nameEn: 'Bull Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色'
+        ],
+        size: 'medium',
+        traits: [
+            '独特',
+            '活泼',
+            '勇敢',
+            '有个性'
+        ],
+        description: '牛头梗有着独特的蛋形头部和活泼的性格，是最有个性的犬种之一。',
+        emotionalTemplates: [
+            '牛头梗会用它的独特和活泼，成为你生活中最有趣的存在。',
+            '它蛋形的头部和搞怪的性格，是快乐的源泉。'
+        ]
+    },
+    {
+        id: 'dog-central-asian',
+        name: '中亚牧羊犬',
+        nameEn: 'Central Asian Shepherd',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 1,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '强壮',
+            '独立',
+            '勇敢',
+            '守护'
+        ],
+        description: '中亚牧羊犬是巨大的守护犬，性格独立勇敢，是优秀的羊群和财产守护者。',
+        emotionalTemplates: [
+            '中亚牧羊犬会用它的强壮和勇敢，给你最坚实的安全感。',
+            '它独立的性格和守护的本能，是最可靠的守护者。'
+        ]
+    },
+    {
+        id: 'dog-aussie-shepherd',
+        name: '澳洲牧羊犬',
+        nameEn: 'Australian Shepherd (Aussie)',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '黑色',
+            '白色',
+            '棕色',
+            '陨石色'
+        ],
+        size: 'large',
+        traits: [
+            '聪明',
+            '精力旺',
+            '忠诚',
+            '敏捷'
+        ],
+        description: '澳洲牧羊犬是极其聪明的工作犬，精力充沛，与澳牧类似，需要大量运动。',
+        emotionalTemplates: [
+            '澳洲牧羊犬会用它的聪明和忠诚，成为你最好的伙伴。',
+            '它敏捷的身姿和专注的眼神，是活力与智慧的完美结合。'
+        ]
+    },
+    {
+        id: 'dog-bernese',
+        name: '伯恩山',
+        nameEn: 'Bernese Mountain Dog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 3,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '黑色',
+            '白色',
+            '棕色'
+        ],
+        size: 'large',
+        traits: [
+            '温柔巨人',
+            '忠诚',
+            '聪明',
+            '稳重'
+        ],
+        description: '伯恩山犬有着华丽的三色被毛，性格温柔稳重，是最受欢迎的大型家庭犬。',
+        emotionalTemplates: [
+            '伯恩山会用它的温柔和忠诚，给你最温暖的拥抱。',
+            '它华丽的外表和稳重的心，是完美的大狗伴侣。'
+        ]
+    },
+    {
+        id: 'dog-papillon',
+        name: '蝴蝶犬',
+        nameEn: 'Papillon',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'fire',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'long',
+        colorTags: [
+            '白色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'tiny',
+        traits: [
+            '优雅',
+            '聪明',
+            '活泼',
+            '美丽'
+        ],
+        description: '蝴蝶犬有着如蝴蝶翅膀般的大耳朵，优雅美丽，是最聪明的玩赏犬之一。',
+        emotionalTemplates: [
+            '蝴蝶犬会用它的优雅和聪明，为你的生活增添美丽和智慧。',
+            '它蝴蝶般的耳朵和灵动的眼神，是艺术品般的存在。'
+        ]
+    },
+    {
+        id: 'dog-czech-wolfdog',
+        name: '捷克狼犬',
+        nameEn: 'Czech Wolfdog',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 3,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'long',
+        colorTags: [
+            '灰色',
+            '白色',
+            '棕色'
+        ],
+        size: 'large',
+        traits: [
+            '狼性',
+            '聪明',
+            '勇敢',
+            '独特'
+        ],
+        description: '捷克狼犬是狼与德牧的混血，外形如狼般野性，性格聪明勇敢，需要经验丰富的饲主。',
+        emotionalTemplates: [
+            '捷克狼犬会用它的野性和忠诚，带你体验最接近自然的感觉。',
+            '它狼一般的外表和狗一样的心，是野性与温柔的完美平衡。'
+        ]
+    },
+    {
+        id: 'dog-staffordshire',
+        name: '斯塔福德夏梗犬',
+        nameEn: 'Staffordshire Bull Terrier',
+        category: 'dog',
+        categoryName: '狗狗',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色',
+            '蓝色'
+        ],
+        size: 'medium',
+        traits: [
+            '勇敢',
+            '亲人',
+            '强壮',
+            '温柔'
+        ],
+        description: '斯塔福德夏梗犬肌肉发达但性格极其亲人，被称为"保姆犬"，对孩子非常温柔。',
+        emotionalTemplates: [
+            '斯塔福德会用它的勇敢和温柔，成为你孩子最好的玩伴和守护者。',
+            '它强壮的外表下，藏着一颗最温柔的保姆心。'
+        ]
+    },
+    // ===== 兔子 (10种) =====
     {
         id: 'rabbit-holland-lop',
         name: '荷兰垂耳兔',
@@ -1277,7 +3383,169 @@ const PET_DATABASE = [
             '它用柔软回应你的每一次抚摸，这是最朴素的温柔。'
         ]
     },
-    // ===== 小宠 (6种) =====
+    {
+        id: 'rabbit-dutch',
+        name: '荷兰兔',
+        nameEn: 'Dutch Rabbit',
+        category: 'rabbit',
+        categoryName: '兔子',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色',
+            '灰色'
+        ],
+        size: 'small',
+        traits: [
+            '经典',
+            '活泼',
+            '亲人',
+            '好养'
+        ],
+        description: '荷兰兔是最经典的宠物兔品种，以其独特的颜色分布闻名，活泼亲人。',
+        emotionalTemplates: [
+            '荷兰兔会用它经典的模样和活泼的性格，成为你生活中最可爱的伙伴。',
+            '它独特的颜色分布像穿了一件小礼服，是最优雅的兔子。'
+        ]
+    },
+    {
+        id: 'rabbit-lop-english',
+        name: '英国垂耳兔',
+        nameEn: 'English Lop',
+        category: 'rabbit',
+        categoryName: '兔子',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '多彩'
+        ],
+        size: 'medium',
+        traits: [
+            '耳朵最长',
+            '温顺',
+            '优雅',
+            '安静'
+        ],
+        description: '英国垂耳兔是垂耳兔中耳朵最长的品种，性格温顺优雅，非常有特色。',
+        emotionalTemplates: [
+            '英国垂耳兔长长的耳朵和温顺的性格，会成为你独特的陪伴。',
+            '它长长的耳朵拖在地上，是最可爱的特征。'
+        ]
+    },
+    {
+        id: 'rabbit-flemish-giant',
+        name: '巨型花明兔',
+        nameEn: 'Flemish Giant Rabbit',
+        category: 'rabbit',
+        categoryName: '兔子',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '灰色',
+            '棕色',
+            '黑色'
+        ],
+        size: 'large',
+        traits: [
+            '体型巨大',
+            '温顺',
+            '像狗',
+            '需要空间'
+        ],
+        description: '巨型花明兔是体型最大的宠物兔，性格温顺像狗一样，需要较大空间。',
+        emotionalTemplates: [
+            '巨型花明兔巨大的身躯和温顺的性格，会让你感受巨人的温柔。',
+            '它像狗一样可以跟着你走来走去，是最亲人的兔子。'
+        ]
+    },
+    {
+        id: 'rabbit-mini-lop',
+        name: '迷你垂耳兔',
+        nameEn: 'Mini Lop',
+        category: 'rabbit',
+        categoryName: '兔子',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '多彩'
+        ],
+        size: 'small',
+        traits: [
+            '小巧',
+            '活泼',
+            '亲人',
+            '可爱'
+        ],
+        description: '迷你垂耳兔是体型最小的垂耳兔，性格活泼亲人，是最受欢迎的宠物兔。',
+        emotionalTemplates: [
+            '迷你垂耳兔小小的身体和下垂的耳朵，会成为你最爱的小萌物。',
+            '它活泼的性格和亲人的本性，是最好的陪伴。'
+        ]
+    },
+    {
+        id: 'rabbit-himalayan',
+        name: '喜马拉雅兔',
+        nameEn: 'Himalayan Rabbit',
+        category: 'rabbit',
+        categoryName: '兔子',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '独特配色',
+            '温顺',
+            '安静',
+            '好养'
+        ],
+        description: '喜马拉雅兔以其独特的白色身体和深色耳朵、鼻子、脚尾巴闻名，性格温顺。',
+        emotionalTemplates: [
+            '喜马拉雅兔独特的配色和温顺的性格，会成为你独特的陪伴。',
+            '它深色的耳朵和鼻子像戴了小面具，是最可爱的特征。'
+        ]
+    },
+    // ===== 小宠 (24种) =====
     {
         id: 'small-hamster',
         name: '仓鼠',
@@ -1309,6 +3577,336 @@ const PET_DATABASE = [
         emotionalTemplates: [
             '仓鼠会在夜晚的寂静中陪伴你，它的小世界里有着大大的快乐。',
             '看着它塞满颊囊的样子，你会被这份认真生活的态度治愈。'
+        ]
+    },
+    {
+        id: 'small-hamster-syrian',
+        name: '金丝熊',
+        nameEn: 'Syrian Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'metal',
+        schedule: 1,
+        energy: 2,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '金色',
+            '白色',
+            '棕色'
+        ],
+        size: 'tiny',
+        traits: [
+            '独居',
+            '温顺',
+            '体型大',
+            '好养'
+        ],
+        description: '金丝熊是体型最大的仓鼠，性格温顺，适合新手饲养，需要独居环境。',
+        emotionalTemplates: [
+            '金丝熊会用它圆滚滚的身体和温顺的性格，成为你最治愈的小伙伴。',
+            '它独居的性格提醒你：有时候，独处也是一种幸福。'
+        ]
+    },
+    {
+        id: 'small-hamster-winter-white',
+        name: '三线仓鼠',
+        nameEn: 'Winter White Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'water',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '灰色',
+            '白色',
+            '黑色'
+        ],
+        size: 'tiny',
+        traits: [
+            '温顺',
+            '小巧',
+            '可爱',
+            '好养'
+        ],
+        description: '三线仓鼠是最温顺的仓鼠品种之一，体型小巧可爱，适合新手。',
+        emotionalTemplates: [
+            '三线仓鼠会用它小巧的身体和温顺的性格，成为你最贴心的夜伴。',
+            '冬天它会变成白色，像一个小雪球温暖你的心。'
+        ]
+    },
+    {
+        id: 'small-hamster-pudding',
+        name: '布丁仓鼠',
+        nameEn: 'Pudding Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'earth',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '黄色',
+            '奶油色'
+        ],
+        size: 'tiny',
+        traits: [
+            '可爱',
+            '温顺',
+            '懒散',
+            '吃货'
+        ],
+        description: '布丁仓鼠因毛色像布丁而得名，性格温顺懒散，是最可爱的仓鼠品种之一。',
+        emotionalTemplates: [
+            '布丁仓鼠会用它奶油色的毛发和懒散的性格，治愈你所有的焦虑。',
+            '看着它像布丁一样软软的样子，心都会融化。'
+        ]
+    },
+    {
+        id: 'small-hamster-silver-fox',
+        name: '银狐仓鼠',
+        nameEn: 'Silver Fox Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'metal',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '银色',
+            '白色',
+            '灰色'
+        ],
+        size: 'tiny',
+        traits: [
+            '优雅',
+            '温顺',
+            '可爱',
+            '好养'
+        ],
+        description: '银狐仓鼠有着银白色的毛发，优雅美丽，是最受欢迎的仓鼠花色之一。',
+        emotionalTemplates: [
+            '银狐仓鼠会用它银白色的毛发和优雅的气质，成为你最特别的小宝贝。',
+            '它银色的毛发像月光一样美丽，照亮你的夜晚。'
+        ]
+    },
+    {
+        id: 'small-hamster-rob-papa',
+        name: '老公公仓鼠',
+        nameEn: 'Roborovski Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'wood',
+        schedule: 1,
+        energy: 3,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色'
+        ],
+        size: 'tiny',
+        traits: [
+            '最小',
+            '活泼',
+            '胆小',
+            '快速'
+        ],
+        description: '老公公仓鼠是体型最小的仓鼠，活泼好动但胆小，观赏性极强。',
+        emotionalTemplates: [
+            '老公公仓鼠小小的身体里装满了活力，看着它跑来跑去就是最大的治愈。',
+            '它迷你到让人心疼，却又活力满满，是生命力的奇迹。'
+        ]
+    },
+    {
+        id: 'small-hamster-rob-mama',
+        name: '老婆婆仓鼠',
+        nameEn: 'Roborovski Female Hamster',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'earth',
+        schedule: 1,
+        energy: 3,
+        space: 1,
+        stability: 1,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色',
+            '灰色'
+        ],
+        size: 'tiny',
+        traits: [
+            '最小',
+            '活泼',
+            '可爱',
+            '独特'
+        ],
+        description: '老婆婆仓鼠与老公公相似，体型极小，活泼可爱，是最迷你的仓鼠。',
+        emotionalTemplates: [
+            '老婆婆仓鼠迷你的体型和活泼的性格，会让你爱不释手。',
+            '它小小的存在，提醒你珍惜生活中每一个微小的美好。'
+        ]
+    },
+    {
+        id: 'small-fancy-rat',
+        name: '花枝鼠',
+        nameEn: 'Fancy Rat',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色',
+            '花色'
+        ],
+        size: 'small',
+        traits: [
+            '聪明',
+            '粘人',
+            '亲人',
+            '可训练'
+        ],
+        description: '花枝鼠是最聪明的啮齿类宠物，可以学会各种技能，性格亲人粘人。',
+        emotionalTemplates: [
+            '花枝鼠会打破你对老鼠的偏见，它的聪明和粘人会让你惊喜。',
+            '当它认出你并跑向你时，你会发现被信任是最幸福的事。'
+        ]
+    },
+    {
+        id: 'small-rat',
+        name: '大鼠',
+        nameEn: 'Rat',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '聪明',
+            '友善',
+            '群居',
+            '亲人'
+        ],
+        description: '大鼠是高度社会化的动物，聪明友善，可以学会各种技能。',
+        emotionalTemplates: [
+            '大鼠会用它的聪明和友善，让你重新认识这个小生命。',
+            '它群居的天性提醒你：陪伴是最珍贵的礼物。'
+        ]
+    },
+    {
+        id: 'small-mouse',
+        name: '小鼠',
+        nameEn: 'Mouse',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 1,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '白色',
+            '黑色',
+            '棕色',
+            '花色'
+        ],
+        size: 'tiny',
+        traits: [
+            '活泼',
+            '小巧',
+            '群居',
+            '好养'
+        ],
+        description: '小鼠是最小巧的啮齿类宠物，活泼好动，需要群居环境。',
+        emotionalTemplates: [
+            '小鼠小小的身体里装满了活力，它们相互依偎的样子是最美的画面。',
+            '看着它们挤在一起睡觉，你会懂得什么是温暖的陪伴。'
+        ]
+    },
+    {
+        id: 'small-gerbil',
+        name: '沙鼠',
+        nameEn: 'Mongolian Gerbil',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'tiny',
+        traits: [
+            '活泼',
+            '好奇',
+            '群居',
+            '昼行'
+        ],
+        description: '沙鼠是白天活动的啮齿类，活泼好奇，喜欢群居，寿命较长。',
+        emotionalTemplates: [
+            '沙鼠白天活跃的习性，让你可以时刻观察它的可爱模样。',
+            '它好奇的眼神和活泼的身影，是每天都有的惊喜。'
         ]
     },
     {
@@ -1377,6 +3975,38 @@ const PET_DATABASE = [
         ]
     },
     {
+        id: 'small-squirrel',
+        name: '魔王松鼠',
+        nameEn: 'Prevost Squirrel',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '棕色',
+            '灰色'
+        ],
+        size: 'small',
+        traits: [
+            '活泼',
+            '机灵',
+            '好动',
+            '聪明'
+        ],
+        description: '魔王松鼠精力充沛，动作敏捷，从小养起可以非常亲人，是活力满满的小伙伴。',
+        emotionalTemplates: [
+            '松鼠会用它灵巧的身影和闪亮的眼睛，为你的生活注入无限活力。',
+            '看着它在你肩头跳跃，你会觉得自己拥有了整座森林。'
+        ]
+    },
+    {
         id: 'small-hedgehog',
         name: '刺猬',
         nameEn: 'Hedgehog',
@@ -1409,35 +4039,36 @@ const PET_DATABASE = [
         ]
     },
     {
-        id: 'small-squirrel',
-        name: '魔王松鼠',
-        nameEn: 'Prevost Squirrel',
+        id: 'small-african-hedgehog',
+        name: '非洲迷你刺猬',
+        nameEn: 'African Pygmy Hedgehog',
         category: 'small',
         categoryName: '小宠',
-        wuxing: 'wood',
-        schedule: 3,
-        energy: 3,
-        space: 2,
+        wuxing: 'metal',
+        schedule: 1,
+        energy: 1,
+        space: 1,
         stability: 2,
-        companion: 2,
-        attachment: 2,
+        companion: 1,
+        attachment: 1,
         responsibility: 2,
-        furType: 'short',
+        furType: 'quill',
         colorTags: [
             '棕色',
+            '白色',
             '灰色'
         ],
-        size: 'small',
+        size: 'tiny',
         traits: [
-            '活泼',
-            '机灵',
-            '好动',
-            '聪明'
+            '迷你',
+            '独特',
+            '夜行',
+            '温顺'
         ],
-        description: '魔王松鼠精力充沛，动作敏捷，从小养起可以非常亲人，是活力满满的小伙伴。',
+        description: '非洲迷你刺猬是体型最小的宠物刺猬，性格温顺，是最受欢迎的刺猬品种。',
         emotionalTemplates: [
-            '松鼠会用它灵巧的身影和闪亮的眼睛，为你的生活注入无限活力。',
-            '看着它在你肩头跳跃，你会觉得自己拥有了整座森林。'
+            '非洲迷你刺猬小小的身体和温顺的性格，会成为你独特的陪伴。',
+            '它迷你到可以放在手心，是最特别的异宠选择。'
         ]
     },
     {
@@ -1473,7 +4104,39 @@ const PET_DATABASE = [
             '它柔软的身体钻进你怀里时，整个世界都变得柔软了。'
         ]
     },
-    // ===== 鸟类 (6种) =====
+    {
+        id: 'small-sugar-glider',
+        name: '蜜袋鼯',
+        nameEn: 'Sugar Glider',
+        category: 'small',
+        categoryName: '小宠',
+        wuxing: 'wood',
+        schedule: 1,
+        energy: 2,
+        space: 2,
+        stability: 3,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'short',
+        colorTags: [
+            '灰色',
+            '白色'
+        ],
+        size: 'tiny',
+        traits: [
+            '粘人',
+            '夜行',
+            '会滑翔',
+            '社群性'
+        ],
+        description: '蜜袋鼯可以从高处滑翔，极其粘人，认主后喜欢待在主人口袋里。',
+        emotionalTemplates: [
+            '蜜袋鼯会从高处滑翔到你身上，用最特别的方式告诉你：我信任你。',
+            '它小小的身体窝在你口袋里时，你会感到一种被依赖的幸福。'
+        ]
+    },
+    // ===== 鸟类 (18种) =====
     {
         id: 'bird-budgie',
         name: '虎皮鹦鹉',
@@ -1575,6 +4238,105 @@ const PET_DATABASE = [
         ]
     },
     {
+        id: 'bird-sun-conure',
+        name: '小太阳鹦鹉',
+        nameEn: 'Sun Conure',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '黄色',
+            '橘黄',
+            '绿色'
+        ],
+        size: 'small',
+        traits: [
+            '活泼',
+            '粘人',
+            '色彩艳丽',
+            '爱叫'
+        ],
+        description: '小太阳鹦鹉拥有太阳般绚丽的羽毛，性格活泼粘人，是颜值最高的鹦鹉之一。',
+        emotionalTemplates: [
+            '小太阳鹦鹉会用它绚丽的羽毛和热情的性格，为你的生活带来阳光。',
+            '它像一个小太阳，永远温暖着你的心。'
+        ]
+    },
+    {
+        id: 'bird-monk-parakeet',
+        name: '和尚鹦鹉',
+        nameEn: 'Monk Parakeet',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '绿色',
+            '灰色',
+            '白色'
+        ],
+        size: 'small',
+        traits: [
+            '聪明',
+            '会说话',
+            '活泼',
+            '亲人'
+        ],
+        description: '和尚鹦鹉说话能力极强，性格活泼亲人，是中型鹦鹉中的热门选择。',
+        emotionalTemplates: [
+            '和尚鹦鹉会成为你的语言伙伴，它的聪明会让你惊叹。',
+            '它独特的叫声和活泼的性格，会让家里充满生机。'
+        ]
+    },
+    {
+        id: 'bird-pacific-parrotlet',
+        name: '太平洋鹦鹉',
+        nameEn: 'Pacific Parrotlet',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '绿色',
+            '蓝色',
+            '黄色'
+        ],
+        size: 'tiny',
+        traits: [
+            '小巧',
+            '活泼',
+            '勇敢',
+            '聪明'
+        ],
+        description: '太平洋鹦鹉是世界上最小的鹦鹉之一，虽然体型迷你但性格大胆活泼。',
+        emotionalTemplates: [
+            '太平洋鹦鹉小小的身体里装着大大的个性，它会证明小个子也有大魅力。',
+            '它勇敢的性格和迷你的体型，是最萌的反差。'
+        ]
+    },
+    {
         id: 'bird-canary',
         name: '金丝雀',
         nameEn: 'Canary',
@@ -1604,6 +4366,136 @@ const PET_DATABASE = [
         emotionalTemplates: [
             '金丝雀会用它的歌声为你的生活配上最美的旋律。',
             '它的存在就像一首诗，不需要解读，只需感受美。'
+        ]
+    },
+    {
+        id: 'bird-society-finch',
+        name: '文鸟',
+        nameEn: 'Society Finch',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'earth',
+        schedule: 3,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'feather',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'tiny',
+        traits: [
+            '温顺',
+            '群居',
+            '好养',
+            '安静'
+        ],
+        description: '文鸟是最温顺的小型鸟类之一，喜欢群居，叫声轻柔，非常适合新手。',
+        emotionalTemplates: [
+            '文鸟会用它们轻柔的呢喃，为你的空间增添一份生动。',
+            '看着它们依偎在一起的样子，你会懂得什么是简单的幸福。'
+        ]
+    },
+    {
+        id: 'bird-zebra-finch',
+        name: '斑胸草雀',
+        nameEn: 'Zebra Finch',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'feather',
+        colorTags: [
+            '灰色',
+            '橘黄',
+            '黑白'
+        ],
+        size: 'tiny',
+        traits: [
+            '活泼',
+            '好养',
+            '爱叫',
+            '群居'
+        ],
+        description: '斑胸草雀是最受欢迎的小型雀类之一，活泼好动，叫声悦耳。',
+        emotionalTemplates: [
+            '斑胸草雀活泼的身影和悦耳的叫声，会让你的空间充满生机。',
+            '它们小小的身体里装满了活力，每一天都是新的表演。'
+        ]
+    },
+    {
+        id: 'bird-myna',
+        name: '八哥',
+        nameEn: 'Myna',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'metal',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '黑色'
+        ],
+        size: 'small',
+        traits: [
+            '会说话',
+            '聪明',
+            '亲人',
+            '模仿力强'
+        ],
+        description: '八哥是说话能力最强的鸟类之一，聪明亲人，可以学会很多词语和声音。',
+        emotionalTemplates: [
+            '八哥会学会你说的每一句话，成为你最独特的对话伙伴。',
+            '它模仿你声音的那一刻，是你们之间最奇妙的连接。'
+        ]
+    },
+    {
+        id: 'bird-pearl-finch',
+        name: '珍珠鸟',
+        nameEn: 'Pearl Finch',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'feather',
+        colorTags: [
+            '白色',
+            '灰色',
+            '斑点'
+        ],
+        size: 'tiny',
+        traits: [
+            '优雅',
+            '安静',
+            '好养',
+            '美丽'
+        ],
+        description: '珍珠鸟以其如珍珠般点缀的羽毛闻名，安静优雅，是观赏价值极高的鸟类。',
+        emotionalTemplates: [
+            '珍珠鸟如珍珠般点缀的羽毛，会让你的生活增添一份精致。',
+            '它安静优雅的存在，是最温柔的陪伴。'
         ]
     },
     {
@@ -1670,7 +4562,169 @@ const PET_DATABASE = [
             '看着它们依偎在一起的样子，你会懂得什么是简单的幸福。'
         ]
     },
-    // ===== 爬宠 (6种) =====
+    {
+        id: 'bird-alexandrine',
+        name: '亚历山大鹦鹉',
+        nameEn: 'Alexandrine Parakeet',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '绿色',
+            '红色'
+        ],
+        size: 'medium',
+        traits: [
+            '优雅',
+            '会说话',
+            '独立',
+            '聪明'
+        ],
+        description: '亚历山大鹦鹉是大型长尾鹦鹉，说话能力强，性格独立优雅。',
+        emotionalTemplates: [
+            '亚历山大鹦鹉优雅的身姿和聪明的头脑，会让你感受王者的气质。',
+            '它会用独特的方式表达对你的依恋，不张扬却深沉。'
+        ]
+    },
+    {
+        id: 'bird-eclectus',
+        name: '折衷鹦鹉',
+        nameEn: 'Eclectus Parrot',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '红色',
+            '绿色',
+            '蓝色'
+        ],
+        size: 'medium',
+        traits: [
+            '雌雄异色',
+            '安静',
+            '优雅',
+            '独特'
+        ],
+        description: '折衷鹦鹉是雌雄颜色完全不同的鹦鹉，雄性翠绿，雌性鲜红，非常独特。',
+        emotionalTemplates: [
+            '折衷鹦鹉独特的雌雄异色，会让你感受大自然的神奇。',
+            '它安静优雅的性格，是最温柔的陪伴。'
+        ]
+    },
+    {
+        id: 'bird-parrotlet-green',
+        name: '绿色小鹦鹉',
+        nameEn: 'Green Parrotlet',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 1,
+        furType: 'feather',
+        colorTags: [
+            '绿色'
+        ],
+        size: 'tiny',
+        traits: [
+            '小巧',
+            '活泼',
+            '可爱',
+            '好养'
+        ],
+        description: '绿色小鹦鹉是最迷你的鹦鹉之一，活泼可爱，适合空间有限的家庭。',
+        emotionalTemplates: [
+            '绿色小鹦鹉小小的身体里装满了活力，每一天都是新的惊喜。',
+            '它迷你的体型和活泼的性格，是空间有限家庭的最佳选择。'
+        ]
+    },
+    {
+        id: 'bird-rosella',
+        name: '玫瑰鹦鹉',
+        nameEn: 'Rosella',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 2,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '红色',
+            '黄色',
+            '蓝色'
+        ],
+        size: 'small',
+        traits: [
+            '色彩艳丽',
+            '优雅',
+            '独立',
+            '美丽'
+        ],
+        description: '玫瑰鹦鹉以其绚丽的色彩闻名，如玫瑰般美丽，性格独立优雅。',
+        emotionalTemplates: [
+            '玫瑰鹦鹉绚丽的羽毛，会让你的生活如玫瑰般多彩。',
+            '它独立优雅的性格，是最美的风景。'
+        ]
+    },
+    {
+        id: 'bird-conure-green-cheek',
+        name: '绿颊锥尾鹦鹉',
+        nameEn: 'Green-cheeked Conure',
+        category: 'bird',
+        categoryName: '鸟类',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 3,
+        space: 2,
+        stability: 2,
+        companion: 3,
+        attachment: 3,
+        responsibility: 2,
+        furType: 'feather',
+        colorTags: [
+            '绿色',
+            '灰色',
+            '红色'
+        ],
+        size: 'small',
+        traits: [
+            '活泼',
+            '粘人',
+            '好奇',
+            '爱玩'
+        ],
+        description: '绿颊锥尾鹦鹉性格活泼粘人，喜欢和主人互动，是最佳的陪伴鹦鹉之一。',
+        emotionalTemplates: [
+            '绿颊锥尾鹦鹉会用它的活泼和粘人，让你的生活永远充满欢乐。',
+            '它好奇的眼神和爱玩的性格，是最可爱的伙伴。'
+        ]
+    },
+    // ===== 爬宠 (20种) =====
     {
         id: 'reptile-turtle',
         name: '乌龟',
@@ -1736,6 +4790,138 @@ const PET_DATABASE = [
         ]
     },
     {
+        id: 'reptile-crested-gecko',
+        name: '睫角守宫',
+        nameEn: 'Crested Gecko',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '橘黄',
+            '灰色'
+        ],
+        size: 'small',
+        traits: [
+            '温顺',
+            '好养',
+            '跳跃',
+            '睫毛'
+        ],
+        description: '睫角守宫有着标志性的睫毛和温顺的性格，是最受欢迎的守宫之一。',
+        emotionalTemplates: [
+            '睫角守宫长长的睫毛和温顺的性格，会让你爱不释手。',
+            '它跳跃的身影和好奇的眼神，是最可爱的互动。'
+        ]
+    },
+    {
+        id: 'reptile-fat-tail-gecko',
+        name: '肥尾守宫',
+        nameEn: 'African Fat-tailed Gecko',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'earth',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '橘黄',
+            '斑纹'
+        ],
+        size: 'small',
+        traits: [
+            '温顺',
+            '肥尾',
+            '好养',
+            '安静'
+        ],
+        description: '肥尾守宫因肥大的尾巴闻名，性格温顺安静，是非常好养的守宫品种。',
+        emotionalTemplates: [
+            '肥尾守宫肥肥的尾巴和温顺的性格，会成为你独特的小伙伴。',
+            '它安静的存在和独特的外表，是最特别的陪伴。'
+        ]
+    },
+    {
+        id: 'reptile-day-gecko',
+        name: '日行守宫',
+        nameEn: 'Day Gecko',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '红色',
+            '蓝色'
+        ],
+        size: 'small',
+        traits: [
+            '昼行',
+            '色彩艳丽',
+            '活泼',
+            '观赏性'
+        ],
+        description: '日行守宫是白天活动的守宫，颜色鲜艳夺目，是最具观赏性的守宫之一。',
+        emotionalTemplates: [
+            '日行守宫鲜艳的绿色身影，会让你的生活空间充满生机。',
+            '它白天活跃的习性，让你可以时刻欣赏它的美丽。'
+        ]
+    },
+    {
+        id: 'reptile-giant-gecko',
+        name: '巨人守宫',
+        nameEn: 'New Caledonian Giant Gecko',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 1,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 1,
+        attachment: 1,
+        responsibility: 3,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '棕色',
+            '灰色'
+        ],
+        size: 'medium',
+        traits: [
+            '体型大',
+            '独特',
+            '稀有',
+            '温顺'
+        ],
+        description: '巨人守宫是体型最大的守宫，性格温顺，是爬宠收藏家的终极目标。',
+        emotionalTemplates: [
+            '巨人守宫独特的体型和稀有性，会让你成为最独特的爬宠主人。',
+            '它温顺的性格和庞大的身躯，是最震撼的陪伴。'
+        ]
+    },
+    {
         id: 'reptile-bearded-dragon',
         name: '鬃狮蜥',
         nameEn: 'Bearded Dragon',
@@ -1765,6 +4951,201 @@ const PET_DATABASE = [
         emotionalTemplates: [
             '鬃狮蜥会打破你对爬宠的偏见，它的温顺会让你惊喜。',
             '当它舒服地趴在你手上晒太阳，你会明白：被信任是最珍贵的礼物。'
+        ]
+    },
+    {
+        id: 'reptile-bearded-dragon-fire',
+        name: '火焰鬃狮蜥',
+        nameEn: 'Fire Bearded Dragon',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '红色',
+            '橘黄',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '色彩艳丽',
+            '温顺',
+            '亲人',
+            '独特'
+        ],
+        description: '火焰鬃狮蜥是鬃狮蜥中颜色最艳丽的品种，如火焰般绚烂。',
+        emotionalTemplates: [
+            '火焰鬃狮蜥绚丽的色彩，会让你感受火焰般的热情。',
+            '它温顺的性格和华丽的外表，是最完美的爬宠伴侣。'
+        ]
+    },
+    {
+        id: 'reptile-blue-tongue-skink',
+        name: '蓝舌石龙子',
+        nameEn: 'Blue-tongued Skink',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '灰色',
+            '蓝色'
+        ],
+        size: 'medium',
+        traits: [
+            '蓝舌',
+            '温顺',
+            '亲人',
+            '聪明'
+        ],
+        description: '蓝舌石龙子以其标志性的蓝色舌头闻名，性格温顺亲人，是最聪明的蜥蜴之一。',
+        emotionalTemplates: [
+            '蓝舌石龙子蓝色的舌头和温顺的性格，会成为你独特的伙伴。',
+            '它聪明到可以认出主人，被信任的感觉是最珍贵的。'
+        ]
+    },
+    {
+        id: 'reptile-green-iguana',
+        name: '绿鬣蜥',
+        nameEn: 'Green Iguana',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 3,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '蓝色'
+        ],
+        size: 'large',
+        traits: [
+            '大型',
+            '素食',
+            '独特',
+            '需要空间'
+        ],
+        description: '绿鬣蜥是体型最大的蜥蜴之一，纯素食，需要较大的空间和丰富的环境。',
+        emotionalTemplates: [
+            '绿鬣蜥庞大的身躯和独特的气质，会让你感受丛林之王的风范。',
+            '它需要你的耐心和空间，回报你的是一份跨越物种的信任。'
+        ]
+    },
+    {
+        id: 'reptile-argentine-tegu',
+        name: '黑白泰加蜥',
+        nameEn: 'Argentine Black and White Tegu',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'water',
+        schedule: 3,
+        energy: 2,
+        space: 3,
+        stability: 3,
+        companion: 3,
+        attachment: 3,
+        responsibility: 3,
+        furType: 'scale',
+        colorTags: [
+            '黑色',
+            '白色'
+        ],
+        size: 'large',
+        traits: [
+            '聪明',
+            '亲人',
+            '大型',
+            '可训练'
+        ],
+        description: '黑白泰加蜥是最聪明的蜥蜴，性格极其亲人，可以像狗一样互动。',
+        emotionalTemplates: [
+            '黑白泰加蜥会颠覆你对蜥蜴的认知，它的聪明和亲人让你惊叹。',
+            '它会认主人、会互动，是最像狗的爬宠。'
+        ]
+    },
+    {
+        id: 'reptile-chameleon',
+        name: '变色龙',
+        nameEn: 'Chameleon',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 1,
+        attachment: 1,
+        responsibility: 3,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '多彩'
+        ],
+        size: 'small',
+        traits: [
+            '变色',
+            '独特',
+            '观赏性',
+            '需要专注照料'
+        ],
+        description: '变色龙是最神奇的爬宠之一，可以改变颜色，独特而充满魅力。',
+        emotionalTemplates: [
+            '变色龙变色的一刻，你会惊叹大自然的神奇。',
+            '它独特的眼睛和缓慢的动作，会让你学会耐心和专注。'
+        ]
+    },
+    {
+        id: 'reptile-uromastyx',
+        name: '王者蜥',
+        nameEn: 'Uromastyx',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'fire',
+        schedule: 3,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '黄色',
+            '橘黄',
+            '红色'
+        ],
+        size: 'medium',
+        traits: [
+            '素食',
+            '温顺',
+            '色彩艳丽',
+            '好养'
+        ],
+        description: '王者蜥是纯素食的蜥蜴，性格温顺，颜色艳丽，是非常好养的蜥蜴。',
+        emotionalTemplates: [
+            '王者蜥艳丽的色彩和温顺的性格，会成为你独特的陪伴。',
+            '它素食的习性，让你可以和它分享蔬菜的乐趣。'
         ]
     },
     {
@@ -1801,6 +5182,72 @@ const PET_DATABASE = [
         ]
     },
     {
+        id: 'reptile-ball-python-banana',
+        name: '香蕉球蟒',
+        nameEn: 'Banana Ball Python',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'earth',
+        schedule: 1,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '黄色',
+            '白色',
+            '斑纹'
+        ],
+        size: 'medium',
+        traits: [
+            '色彩艳丽',
+            '温顺',
+            '独特',
+            '稀有'
+        ],
+        description: '香蕉球蟒是球蟒中最受欢迎的花色之一，如香蕉般黄艳艳的色彩非常美丽。',
+        emotionalTemplates: [
+            '香蕉球蟒绚丽的黄色，会让你的生活空间充满阳光。',
+            '它温顺的性格和美丽的外表，是最独特的爬宠选择。'
+        ]
+    },
+    {
+        id: 'reptile-ball-python-spider',
+        name: '蜘蛛球蟒',
+        nameEn: 'Spider Ball Python',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'water',
+        schedule: 1,
+        energy: 1,
+        space: 2,
+        stability: 3,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '白色',
+            '黑色'
+        ],
+        size: 'medium',
+        traits: [
+            '花纹独特',
+            '温顺',
+            '独特',
+            '稀有'
+        ],
+        description: '蜘蛛球蟒以其独特的蜘蛛花纹闻名，是球蟒中最受欢迎的花色之一。',
+        emotionalTemplates: [
+            '蜘蛛球蟒独特的花纹和温顺的性格，会成为你独特的陪伴。',
+            '它神秘的花纹和安静的存在，是最特别的爬宠。'
+        ]
+    },
+    {
         id: 'reptile-corn-snake',
         name: '玉米蛇',
         nameEn: 'Corn Snake',
@@ -1831,6 +5278,71 @@ const PET_DATABASE = [
         emotionalTemplates: [
             '玉米蛇会用它绚丽的花纹告诉你：美丽有千种形态。',
             '它安静地缠绕在你手臂上时，你会感受到一种独特的信任。'
+        ]
+    },
+    {
+        id: 'reptile-corn-snake-albino',
+        name: '白化玉米蛇',
+        nameEn: 'Albino Corn Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'metal',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '白色',
+            '黄色',
+            '红色'
+        ],
+        size: 'medium',
+        traits: [
+            '白化',
+            '温顺',
+            '好养',
+            '独特'
+        ],
+        description: '白化玉米蛇是玉米蛇的白化品种，有着红白相间的美丽花纹。',
+        emotionalTemplates: [
+            '白化玉米蛇红白相间的美丽，会让你惊叹生命的多样性。',
+            '它独特的白化基因，是最珍贵的爬宠礼物。'
+        ]
+    },
+    {
+        id: 'reptile-corn-snake-blizzard',
+        name: '暴风雪玉米蛇',
+        nameEn: 'Blizzard Corn Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'water',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '白色',
+            '粉色'
+        ],
+        size: 'medium',
+        traits: [
+            '纯白',
+            '温顺',
+            '好养',
+            '稀有'
+        ],
+        description: '暴风雪玉米蛇是纯白色的玉米蛇，如暴风雪般洁白，是最稀有的花色之一。',
+        emotionalTemplates: [
+            '暴风雪玉米蛇纯白如雪的美丽，会让你感受冬天的纯净。',
+            '它稀有而美丽，是爬宠收藏家的梦幻之选。'
         ]
     },
     {
@@ -1865,6 +5377,172 @@ const PET_DATABASE = [
         emotionalTemplates: [
             '王蛇用它斑斓的色彩，诠释着自然界最大胆的审美。',
             '它的名字里有"王"，它的气场配得上这个称号。'
+        ]
+    },
+    {
+        id: 'reptile-milk-snake',
+        name: '奶蛇',
+        nameEn: 'Milk Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'water',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '红色',
+            '白色',
+            '黑色',
+            '三色'
+        ],
+        size: 'medium',
+        traits: [
+            '三色',
+            '温顺',
+            '好养',
+            '美丽'
+        ],
+        description: '奶蛇以其红白黑三色环纹闻名，是最美丽的蛇类之一，性格温顺好养。',
+        emotionalTemplates: [
+            '奶蛇三色的美丽花纹，会让你感受大自然的艺术天赋。',
+            '它温顺的性格和美丽的外表，是最适合新手的蛇类。'
+        ]
+    },
+    {
+        id: 'reptile-hognose-snake',
+        name: '猪鼻蛇',
+        nameEn: 'Hognose Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 2,
+        attachment: 2,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '橘黄',
+            '灰色'
+        ],
+        size: 'small',
+        traits: [
+            '猪鼻',
+            '憨厚',
+            '装死',
+            '可爱'
+        ],
+        description: '猪鼻蛇因其独特的翘鼻子和憨厚的表情走红，性格温顺，会装死卖萌。',
+        emotionalTemplates: [
+            '猪鼻蛇憨厚的猪鼻子和装死的技能，会让你笑到停不下来。',
+            '它独特的长相和可爱的性格，是最萌的蛇类。'
+        ]
+    },
+    {
+        id: 'reptile-gopher-snake',
+        name: '牛蛇',
+        nameEn: 'Gopher Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'earth',
+        schedule: 2,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '黑色',
+            '斑纹'
+        ],
+        size: 'large',
+        traits: [
+            '大型',
+            '温顺',
+            '好养',
+            '独特'
+        ],
+        description: '牛蛇是体型较大的蛇类，性格温顺，花纹独特，适合有经验的蛇类爱好者。',
+        emotionalTemplates: [
+            '牛蛇庞大的身躯和温顺的性格，会让你感受力量与温柔的平衡。',
+            '它独特的花纹和安静的存在，是最震撼的爬宠陪伴。'
+        ]
+    },
+    {
+        id: 'reptile-garter-snake',
+        name: '袜带蛇',
+        nameEn: 'Garter Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 3,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '棕色',
+            '条纹'
+        ],
+        size: 'small',
+        traits: [
+            '条纹',
+            '温顺',
+            '昼行',
+            '好养'
+        ],
+        description: '袜带蛇是最常见的蛇类之一，有着独特的条纹，性格温顺，适合新手。',
+        emotionalTemplates: [
+            '袜带蛇独特的条纹和温顺的性格，是最适合入门的蛇类。',
+            '它白天活跃的习性，让你可以时刻观察它的可爱模样。'
+        ]
+    },
+    {
+        id: 'reptile-california-king-snake',
+        name: '加州王蛇',
+        nameEn: 'California King Snake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '黑色',
+            '白色',
+            '条纹'
+        ],
+        size: 'medium',
+        traits: [
+            '条纹',
+            '温顺',
+            '好养',
+            '经典'
+        ],
+        description: '加州王蛇是最经典的王蛇品种，黑白条纹如斑马线，性格温顺好养。',
+        emotionalTemplates: [
+            '加州王蛇经典的黑白条纹，会让你感受极简的美学。',
+            '它温顺的性格和好养的习性，是最适合新手的蛇类。'
         ]
     },
     // ===== 水族 (6种) =====
@@ -2328,6 +6006,105 @@ const PET_DATABASE = [
             '狐狸会用它灵动的眼神和优雅的身姿，让你感受野性与温柔的交融。',
             '小王子说得对：你驯养了它，它就是你独一无二的狐狸。'
         ]
+    },
+    // ===== 新增品种 (3种) =====
+    {
+        id: 'reptile-california-king-snake',
+        name: '加州王蛇',
+        nameEn: 'California Kingsnake',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'metal',
+        schedule: 2,
+        energy: 1,
+        space: 2,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '黑色',
+            '白色',
+            '条纹'
+        ],
+        size: 'medium',
+        traits: [
+            '条纹醒目',
+            '温顺',
+            '好养',
+            '经典'
+        ],
+        description: '加州王蛇是最受欢迎的王蛇品种，黑白条纹醒目，性格温顺，是蛇类爱好者的经典选择。',
+        emotionalTemplates: [
+            '加州王蛇黑白分明的条纹，会让你感受大自然最纯粹的审美。',
+            '它温顺的性格和经典的条纹，是最耐看的爬宠陪伴。'
+        ]
+    },
+    {
+        id: 'reptile-grass-lizard',
+        name: '草蜥',
+        nameEn: 'Grass Lizard',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'wood',
+        schedule: 2,
+        energy: 2,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 1,
+        furType: 'scale',
+        colorTags: [
+            '绿色',
+            '棕色'
+        ],
+        size: 'small',
+        traits: [
+            '灵巧',
+            '活泼',
+            '亲民',
+            '好养'
+        ],
+        description: '草蜥是国内最常见的蜥蜴之一，体型小巧灵巧，活泼好动，是入门级爬宠。',
+        emotionalTemplates: [
+            '草蜥灵巧的身影会让你想起童年在草丛中追逐的时光。',
+            '它小巧的身体里装满了活力，是最接地气的小蜥蜴。'
+        ]
+    },
+    {
+        id: 'reptile-african-fat-tail-gecko',
+        name: '非洲胖尾守宫',
+        nameEn: 'African Fat-tailed Gecko',
+        category: 'reptile',
+        categoryName: '爬宠',
+        wuxing: 'earth',
+        schedule: 1,
+        energy: 1,
+        space: 1,
+        stability: 2,
+        companion: 1,
+        attachment: 1,
+        responsibility: 2,
+        furType: 'scale',
+        colorTags: [
+            '棕色',
+            '橘黄',
+            '条纹'
+        ],
+        size: 'small',
+        traits: [
+            '肥尾',
+            '温顺',
+            '独特',
+            '好养'
+        ],
+        description: '非洲胖尾守宫因肥大的尾巴闻名，性格温顺安静，与豹纹守宫一样是热门入门守宫。',
+        emotionalTemplates: [
+            '非洲胖尾守宫肥肥的尾巴藏着它的营养储备，也藏着对你的信任。',
+            '它安静的存在和独特的外表，是最特别的守宫伙伴。'
+        ]
     }
 ];
 function getBreedsByCategory(category) {
@@ -2768,24 +6545,45 @@ function getDimensionIcon(dimension) {
 ]);
 const PET_AVATARS = {
     // ===== 猫咪 =====
-    'cat-british-shorthair': '/pets/avatars/cat-british-shorthair.png',
+    // 已有头像 (28种)
     'cat-ragdoll': '/pets/avatars/cat-ragdoll.png',
-    'cat-orange': '/pets/avatars/cat-orange.png',
     'cat-siamese': '/pets/avatars/cat-siamese.png',
-    'cat-american-shorthair': '/pets/avatars/cat-american-shorthair.png',
     'cat-scottish-fold': '/pets/avatars/cat-scottish-fold.png',
     'cat-maine-coon': '/pets/avatars/cat-maine-coon.png',
     'cat-persian': '/pets/avatars/cat-persian.png',
     'cat-russian-blue': '/pets/avatars/cat-russian-blue.png',
     'cat-sphynx': '/pets/avatars/cat-sphynx.png',
     'cat-munchkin': '/pets/avatars/cat-munchkin.png',
+    // 中华田园猫
+    'cat-chinese-sanhua': '/pets/avatars/cat-chinese-sanhua.png',
+    'cat-chinese-cow': '/pets/avatars/cat-chinese-cow.png',
+    'cat-chinese-lihua': '/pets/avatars/cat-chinese-lihua.png',
+    'cat-chinese-orange': '/pets/avatars/cat-chinese-orange.png',
+    // 英短花色
+    'cat-british-silver': '/pets/avatars/cat-british-silver.png',
+    'cat-british-blue': '/pets/avatars/cat-british-blue.png',
+    'cat-british-blue-white': '/pets/avatars/cat-british-blue-white.png',
+    'cat-british-golden': '/pets/avatars/cat-british-golden.png',
+    // 其他品种
+    'cat-norwegian': '/pets/avatars/cat-norwegian.png',
+    'cat-napoleon': '/pets/avatars/cat-napoleon.png',
+    'cat-bengal': '/pets/avatars/cat-bengal.png',
+    'cat-american-curl': '/pets/avatars/cat-american-curl.png',
+    'cat-american-cheese': '/pets/avatars/cat-american-cheese.png',
+    'cat-american-tabby': '/pets/avatars/cat-american-tabby.png',
+    'cat-exotic': '/pets/avatars/cat-exotic.png',
+    'cat-oriental': '/pets/avatars/cat-oriental.png',
+    'cat-devon': '/pets/avatars/cat-devon.png',
+    'cat-birman': '/pets/avatars/cat-birman.png',
+    'cat-persian-chinchilla': '/pets/avatars/cat-persian-chinchilla.png',
+    'cat-abyssinian': '/pets/avatars/cat-abyssinian.png',
     // ===== 狗狗 =====
     'dog-golden-retriever': '/pets/avatars/dog-golden-retriever.png',
     'dog-shiba': '/pets/avatars/dog-shiba.png',
     'dog-corgi': '/pets/avatars/dog-corgi.png',
     'dog-poodle': '/pets/avatars/dog-poodle.png',
     'dog-labrador': '/pets/avatars/dog-labrador.png',
-    'dog-husky': '/pets/avatars/dog-husky.jpg',
+    'dog-husky': '/pets/avatars/dog-husky.png',
     'dog-samoyed': '/pets/avatars/dog-samoyed.png',
     'dog-pomeranian': '/pets/avatars/dog-pomeranian.png',
     'dog-bichon': '/pets/avatars/dog-bichon.png',
@@ -2795,50 +6593,115 @@ const PET_AVATARS = {
     'dog-beagle': '/pets/avatars/dog-beagle.png',
     'dog-dachshund': '/pets/avatars/dog-dachshund.png',
     'dog-cocker-spaniel': '/pets/avatars/dog-cocker-spaniel.png',
+    // 新增狗狗
+    'dog-teddy': '/pets/avatars/dog-teddy.png',
+    'dog-schnauzer': '/pets/avatars/dog-schnauzer.png',
+    'dog-yorkshire': '/pets/avatars/dog-yorkshire.png',
+    'dog-westie': '/pets/avatars/dog-westie.png',
+    'dog-maltese': '/pets/avatars/dog-maltese.png',
+    'dog-pug': '/pets/avatars/dog-pug.png',
+    'dog-akita': '/pets/avatars/dog-akita.png',
+    'dog-alaskan-malamute': '/pets/avatars/dog-alaskan-malamute.png',
+    'dog-shetland-sheepdog': '/pets/avatars/dog-shetland-sheepdog.png',
+    'dog-bedlington': '/pets/avatars/dog-bedlington.png',
+    'dog-cavalier': '/pets/avatars/dog-cavalier.png',
+    'dog-doberman': '/pets/avatars/dog-doberman.png',
+    'dog-rottweiler': '/pets/avatars/dog-rottweiler.png',
+    'dog-shih-tzu': '/pets/avatars/dog-shih-tzu.png',
+    'dog-chinese-rural': '/pets/avatars/dog-chinese-rural.png',
+    'dog-dachshund-long': '/pets/avatars/dog-dachshund-long.png',
+    'dog-maltipoo': '/pets/avatars/dog-maltipoo.png',
+    'dog-cockapoo': '/pets/avatars/dog-cockapoo.png',
+    'dog-wire-fox-terrier': '/pets/avatars/dog-wire-fox-terrier.png',
+    'dog-dachshund-short': '/pets/avatars/dog-dachshund-short.png',
+    'dog-bulldog': '/pets/avatars/dog-bulldog.png',
+    'dog-australian-shepherd': '/pets/avatars/dog-australian-shepherd.png',
+    'dog-whippet': '/pets/avatars/dog-whippet.png',
+    'dog-greyhound': '/pets/avatars/dog-greyhound.png',
+    'dog-chihuahua': '/pets/avatars/dog-chihuahua.png',
+    'dog-scottish-terrier': '/pets/avatars/dog-scottish-terrier.png',
+    'dog-jack-russell': '/pets/avatars/dog-jack-russell.png',
+    'dog-english-springer': '/pets/avatars/dog-english-springer.png',
+    'dog-chinese-pastoral': '/pets/avatars/dog-chinese-pastoral.png',
+    'dog-miniature-pinscher': '/pets/avatars/dog-miniature-pinscher.png',
+    'dog-dalmatian': '/pets/avatars/dog-dalmatian.png',
+    'dog-border-collie-merle': '/pets/avatars/dog-border-collie-merle.png',
+    'dog-newfoundland': '/pets/avatars/dog-newfoundland.png',
+    'dog-pharaoh-hound': '/pets/avatars/dog-pharaoh-hound.png',
+    'dog-beagle-cn': '/pets/avatars/dog-beagle-cn.png',
+    'dog-german-shorthaired': '/pets/avatars/dog-german-shorthaired.png',
+    'dog-pitbull': '/pets/avatars/dog-pitbull.png',
+    'dog-bull-terrier': '/pets/avatars/dog-bull-terrier.png',
+    'dog-central-asian': '/pets/avatars/dog-central-asian.png',
+    'dog-aussie-shepherd': '/pets/avatars/dog-aussie-shepherd.png',
+    'dog-bernese': '/pets/avatars/dog-bernese.png',
+    'dog-papillon': '/pets/avatars/dog-papillon.png',
+    'dog-czech-wolfdog': '/pets/avatars/dog-czech-wolfdog.png',
+    'dog-staffordshire': '/pets/avatars/dog-staffordshire.png',
     // ===== 兔子 =====
     'rabbit-holland-lop': '/pets/avatars/rabbit-holland-lop.png',
-    'rabbit-lionhead': '/pets/avatars/rabbit-lionhead.png',
     'rabbit-dwarf': '/pets/avatars/rabbit-dwarf.png',
-    'rabbit-angora': '/pets/avatars/rabbit-angora.png',
-    'rabbit-rex': '/pets/avatars/rabbit-rex.png',
+    'rabbit-dutch': '/pets/avatars/rabbit-dutch.png',
     // ===== 小宠 =====
     'small-hamster': '/pets/avatars/small-hamster.png',
+    'small-hamster-syrian': '/pets/avatars/small-hamster-syrian.png',
+    'small-hamster-winter-white': '/pets/avatars/small-hamster-winter-white.png',
+    'small-hamster-pudding': '/pets/avatars/small-hamster-pudding.png',
+    'small-hamster-silver-fox': '/pets/avatars/small-hamster-silver-fox.png',
+    'small-hamster-rob-papa': '/pets/avatars/small-hamster-rob-papa.png',
+    'small-hamster-rob-mama': '/pets/avatars/small-hamster-rob-mama.png',
+    'small-fancy-rat': '/pets/avatars/small-fancy-rat.png',
+    'small-rat': '/pets/avatars/small-rat.png',
+    'small-mouse': '/pets/avatars/small-mouse.png',
+    'small-gerbil': '/pets/avatars/small-gerbil.png',
     'small-guinea-pig': '/pets/avatars/small-guinea-pig.png',
     'small-chinchilla': '/pets/avatars/small-chinchilla.png',
-    'small-hedgehog': '/pets/avatars/small-hedgehog.png',
     'small-squirrel': '/pets/avatars/small-squirrel.png',
+    'small-african-hedgehog': '/pets/avatars/small-african-hedgehog.png',
+    'small-sugar-glider': '/pets/avatars/small-sugar-glider.png',
     'small-ferret': '/pets/avatars/small-ferret.png',
     // ===== 鸟类 =====
     'bird-budgie': '/pets/avatars/bird-budgie.png',
     'bird-cockatiel': '/pets/avatars/bird-cockatiel.png',
     'bird-lovebird': '/pets/avatars/bird-lovebird.png',
+    'bird-sun-conure': '/pets/avatars/bird-sun-conure.png',
+    'bird-monk-parakeet': '/pets/avatars/bird-monk-parakeet.png',
+    'bird-pacific-parrotlet': '/pets/avatars/bird-pacific-parrotlet.png',
     'bird-canary': '/pets/avatars/bird-canary.png',
-    'bird-african-grey': '/pets/avatars/bird-african-grey.png',
-    'bird-finch': '/pets/avatars/bird-finch.png',
-    // ===== 爬宠 =====
-    'reptile-turtle': '/pets/avatars/reptile-turtle.png',
+    'bird-society-finch': '/pets/avatars/bird-society-finch.png',
+    'bird-zebra-finch': '/pets/avatars/bird-zebra-finch.png',
+    'bird-myna': '/pets/avatars/bird-myna.png',
+    'bird-pearl-finch': '/pets/avatars/bird-pearl-finch.png',
+    // ===== 爬宠 - 守宫 =====
     'reptile-leopard-gecko': '/pets/avatars/reptile-leopard-gecko.png',
+    'reptile-crested-gecko': '/pets/avatars/reptile-crested-gecko.png',
+    'reptile-fat-tail-gecko': '/pets/avatars/reptile-fat-tail-gecko.png',
+    'reptile-day-gecko': '/pets/avatars/reptile-day-gecko.png',
+    'reptile-giant-gecko': '/pets/avatars/reptile-giant-gecko.png',
+    // ===== 爬宠 - 蜥蜴 =====
     'reptile-bearded-dragon': '/pets/avatars/reptile-bearded-dragon.png',
+    'reptile-bearded-dragon-fire': '/pets/avatars/reptile-bearded-dragon-fire.png',
+    'reptile-blue-tongue-skink': '/pets/avatars/reptile-blue-tongue-skink.png',
+    'reptile-green-iguana': '/pets/avatars/reptile-green-iguana.png',
+    'reptile-argentine-tegu': '/pets/avatars/reptile-argentine-tegu.png',
+    'reptile-chameleon': '/pets/avatars/reptile-chameleon.png',
+    'reptile-uromastyx': '/pets/avatars/reptile-uromastyx.png',
+    // ===== 爬宠 - 蛇类 =====
     'reptile-ball-python': '/pets/avatars/reptile-ball-python.png',
+    'reptile-ball-python-banana': '/pets/avatars/reptile-ball-python-banana.png',
+    'reptile-ball-python-spider': '/pets/avatars/reptile-ball-python-spider.png',
     'reptile-corn-snake': '/pets/avatars/reptile-corn-snake.png',
+    'reptile-corn-snake-albino': '/pets/avatars/reptile-corn-snake-albino.png',
+    'reptile-corn-snake-blizzard': '/pets/avatars/reptile-corn-snake-blizzard.png',
     'reptile-king-snake': '/pets/avatars/reptile-king-snake.png',
-    // ===== 水族 =====
-    'fish-goldfish': '/pets/avatars/fish-goldfish.png',
-    'fish-betta': '/pets/avatars/fish-betta.png',
-    'fish-tropical': '/pets/avatars/fish-tropical.png',
-    'fish-shrimp': '/pets/avatars/fish-shrimp.png',
-    'fish-koi': '/pets/avatars/fish-koi.png',
-    'fish-coral-tank': '/pets/avatars/fish-coral-tank.png',
-    // ===== 两栖 =====
-    'amphibian-horned-frog': '/pets/avatars/amphibian-horned-frog.png',
-    'amphibian-axolotl': '/pets/avatars/amphibian-axolotl.png',
-    'amphibian-tree-frog': '/pets/avatars/amphibian-tree-frog.png',
-    'amphibian-fire-belly-newt': '/pets/avatars/amphibian-fire-belly-newt.png',
-    // ===== 异宠 =====
-    'exotic-mini-pig': '/pets/avatars/exotic-mini-pig.png',
-    'exotic-alpaca': '/pets/avatars/exotic-alpaca.png',
-    'exotic-sugar-glider': '/pets/avatars/exotic-sugar-glider.png',
-    'exotic-fox': '/pets/avatars/exotic-fox.png'
+    'reptile-milk-snake': '/pets/avatars/reptile-milk-snake.png',
+    'reptile-hognose-snake': '/pets/avatars/reptile-hognose-snake.png',
+    'reptile-gopher-snake': '/pets/avatars/reptile-gopher-snake.png',
+    'reptile-garter-snake': '/pets/avatars/reptile-garter-snake.png',
+    // ===== 新增品种 =====
+    'reptile-california-king-snake': '/pets/avatars/reptile-california-king-snake.png',
+    'reptile-grass-lizard': '/pets/avatars/reptile-grass-lizard.png',
+    'reptile-african-fat-tail-gecko': '/pets/avatars/reptile-african-fat-tail-gecko.png'
 };
 const DEFAULT_AVATAR = '/pets/avatars/default-pet.png';
 function getPetAvatar(breedId) {
@@ -3636,7 +7499,7 @@ function ResultPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "pointer-events-none absolute inset-0 z-50 opacity-[0.03] mix-blend-overlay",
                         style: {
-                            backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')`
+                            backgroundImage: `url('/noise.svg')`
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/result/page.tsx",
@@ -7784,11 +11647,11 @@ function ResultPage() {
                                                 const tX = encodeURIComponent(shareTextX);
                                                 const tWeibo = encodeURIComponent(shareTextFull);
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mt-4 flex gap-6",
+                                                    className: "mt-4 flex gap-4 flex-wrap justify-center",
                                                     style: {
                                                         fontFamily: "'Space Mono', monospace",
-                                                        fontSize: '12px',
-                                                        letterSpacing: '0.2em',
+                                                        fontSize: '11px',
+                                                        letterSpacing: '0.1em',
                                                         color: 'rgba(255,255,255,0.8)'
                                                     },
                                                     children: [
@@ -7796,31 +11659,214 @@ function ResultPage() {
                                                             href: `https://twitter.com/intent/tweet?text=${tX}&url=${u}`,
                                                             target: "_blank",
                                                             rel: "noopener noreferrer",
-                                                            className: "hover:text-white/60 transition-colors cursor-pointer",
-                                                            children: "X"
-                                                        }, void 0, false, {
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 1995,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 1995,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: "X"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 1996,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/app/result/page.tsx",
-                                                            lineNumber: 1993,
+                                                            lineNumber: 1994,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                             href: `https://service.weibo.com/share/share.php?title=${tWeibo}&url=${u}`,
                                                             target: "_blank",
                                                             rel: "noopener noreferrer",
-                                                            className: "hover:text-white/60 transition-colors cursor-pointer",
-                                                            children: "Weibo"
-                                                        }, void 0, false, {
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M10.098 20c-4.612 0-9.098-2.07-9.098-5.97 0-2.06 1.178-4.44 3.206-6.7 2.696-3.01 5.836-4.63 7.012-3.61.547.47.584 1.3.16 2.36-.21.52-.07.63.34.39 1.54-.89 2.98-1.21 3.75-.72.79.5.84 1.61.16 3.04-.17.37-.05.49.32.38 1.75-.53 3.06-.27 3.48.7.44 1-.27 2.45-1.86 4.02-2.45 2.41-5.83 6.1-7.342 6.1zm-4.648-9.97c-2.038 1.19-3.12 2.81-2.418 3.62.702.81 2.818.44 4.728-.83 1.91-1.27 2.87-3.02 2.17-3.83-.71-.81-2.45-.15-4.48 1.04zm4.088 5.17c.93-.17 1.65-.66 1.6-1.1-.04-.44-.83-.68-1.76-.51-.93.17-1.65.66-1.6 1.1.05.44.83.68 1.76.51zM12.508 3c-.14-.12-.07-.35.15-.52 1.5-1.14 3.73-1.25 5.14-.25.14.1.18.28.09.41-.09.13-.28.17-.41.08-1.18-.83-3.12-.74-4.43.18-.13.0-.29.1-.54.1zm1.15 1.51c-.12-.1-.07-.3.12-.46 1.16-.98 2.76-1.13 3.58-.33.12.12.12.31 0 .43-.11.11-.3.11-.42 0-.59-.57-1.82-.48-2.74.3-.12.1-.38.16-.54.06zm6.53 6.93c-.53-.22-.76-.82-.51-1.33.24-.52.1-1.12-.33-1.35-.42-.24-.56-.77-.31-1.19.25-.43.78-.57 1.2-.32.43.25.98.09 1.24-.34.24-.42.77-.56 1.19-.31.42.24.55.77.3 1.19-.24.42-.09.97.35 1.22.42.24.56.77.31 1.19-.25.43-.78.57-1.2.32-.43-.25-.98-.09-1.24.34-.24.42-.77.56-1.19.31-.42-.25-.55-.78-.31-1.19.25-.43.1-.98-.35-1.24z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 2000,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2000,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: "Weibo"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2001,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/app/result/page.tsx",
-                                                            lineNumber: 1994,
+                                                            lineNumber: 1999,
+                                                            columnNumber: 27
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: `https://www.douyin.com/`,
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 2005,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2005,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: "抖音"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2006,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/result/page.tsx",
+                                                            lineNumber: 2004,
+                                                            columnNumber: 27
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: `https://www.xiaohongshu.com/`,
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.88.03-.24.37-.49 1.02-.74 3.98-1.73 6.64-2.87 7.97-3.43 3.8-1.57 4.59-1.85 5.1-1.86.11 0 .37.03.53.14.14.1.18.23.2.33.02.09.04.3.02.46z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 2010,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2010,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: "小红书"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2011,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/result/page.tsx",
+                                                            lineNumber: 2009,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "hover:text-white/60 transition-colors cursor-pointer",
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
                                                             onClick: ()=>handleCopyText(shareTextFull, 1),
-                                                            children: copiedIndex === 1 ? 'Copied ✓' : 'Copy'
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.32.32 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098c.996.27 2.058.392 3.154.392 4.8 0 8.691-3.288 8.691-7.342S13.491 2.188 8.691 2.188zM5.785 7.09a1.03 1.03 0 1 1 0 2.058 1.03 1.03 0 0 1 0-2.058zm5.812 0a1.03 1.03 0 1 1 0 2.058 1.03 1.03 0 0 1 0-2.058zm5.34 3.586c-4.7 0-8.511 3.214-8.511 7.18 0 1.69.71 3.24 1.9 4.45a.54.54 0 0 1 .14.58l-.31 1.16a.48.48 0 0 0 .72.5l1.57-.94a.71.71 0 0 1 .6-.08c.88.23 1.81.35 2.78.35 4.7 0 8.511-3.214 8.511-7.18s-3.811-7.02-8.4-7.02zm-2.66 3.79a.87.87 0 1 1 0 1.74.87.87 0 0 1 0-1.74zm5.32 0a.87.87 0 1 1 0 1.74.87.87 0 0 1 0-1.74z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 2018,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2018,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: copiedIndex === 1 ? '已复制 ✓' : '微信'
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2019,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/app/result/page.tsx",
-                                                            lineNumber: 1995,
+                                                            lineNumber: 2014,
+                                                            columnNumber: 27
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                            href: `https://www.instagram.com/`,
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            className: "flex items-center gap-1.5 hover:text-white/60 transition-colors cursor-pointer",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                    width: "14",
+                                                                    height: "14",
+                                                                    viewBox: "0 0 24 24",
+                                                                    fill: "currentColor",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/result/page.tsx",
+                                                                        lineNumber: 2023,
+                                                                        columnNumber: 97
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2023,
+                                                                    columnNumber: 29
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    children: "Instagram"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/result/page.tsx",
+                                                                    lineNumber: 2024,
+                                                                    columnNumber: 29
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/result/page.tsx",
+                                                            lineNumber: 2022,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
@@ -7843,7 +11889,7 @@ function ResultPage() {
                                                         children: generateDestinyId(birthYear, birthMonth, birthDay, best.breed.id)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/result/page.tsx",
-                                                        lineNumber: 2007,
+                                                        lineNumber: 2032,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7858,13 +11904,13 @@ function ResultPage() {
                                                         children: RARITY_LABEL[getRarityLevel(best.breed.category)].en
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/result/page.tsx",
-                                                        lineNumber: 2010,
+                                                        lineNumber: 2035,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/result/page.tsx",
-                                                lineNumber: 2006,
+                                                lineNumber: 2031,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7879,7 +11925,7 @@ function ResultPage() {
                                                 children: "Your destiny is now recorded"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/result/page.tsx",
-                                                lineNumber: 2025,
+                                                lineNumber: 2050,
                                                 columnNumber: 21
                                             }, this)
                                         ]
